@@ -14,7 +14,7 @@ build:
     - graphviz
   jobs:
     pre_build:
-      - doxygen
+      - doxygen Doxyfile.in 
 
 sphinx:
   configuration: source/conf.py
