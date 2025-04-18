@@ -25,3 +25,8 @@ formats:
 python:
   install:
     - requirements: requirements.txt
+
+submodules:
+  include:
+    - PySysLinkBase
+  recursive: true
