@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1IOdeStepSolver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PySysLinkBase::IOdeStepSolver</compoundname>
+    <derivedcompoundref refid="classPySysLinkBase_1_1EulerBackwardStepSolver" prot="public" virt="non-virtual">PySysLinkBase::EulerBackwardStepSolver</derivedcompoundref>
+    <derivedcompoundref refid="classPySysLinkBase_1_1EulerForwardStepSolver" prot="public" virt="non-virtual">PySysLinkBase::EulerForwardStepSolver</derivedcompoundref>
+    <derivedcompoundref refid="classPySysLinkBase_1_1OdeintImplicitStepSolver" prot="public" virt="non-virtual">PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classPySysLinkBase_1_1OdeintStepSolver" prot="public" virt="non-virtual">PySysLinkBase::OdeintStepSolver&lt; T &gt;</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1IOdeStepSolver_1a44ecb6b46a609e384e001995554edda3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool PySysLinkBase::IOdeStepSolver::IsJacobianNeeded</definition>
+        <argsstring>() const</argsstring>
+        <name>IsJacobianNeeded</name>
+        <qualifiedname>PySysLinkBase::IOdeStepSolver::IsJacobianNeeded</qualifiedname>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerBackwardStepSolver_1acf67347a72a29e880fe17d3219f5be82">IsJacobianNeeded</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerForwardStepSolver_1a82bd4a44466ba9d1ed8a18612a4529d8">IsJacobianNeeded</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a4e4e8ebafd7d64005dd5869cf89ad9d7">IsJacobianNeeded</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" line="14" column="26" bodyfile="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1IOdeStepSolver_1a659ebf9b823e7ebefe7ed67f9aff9976" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt;</type>
+        <definition>virtual std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt; PySysLinkBase::IOdeStepSolver::SolveStep</definition>
+        <argsstring>(std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt; system, std::vector&lt; double &gt; states_0, double currentTime, double timeStep)=0</argsstring>
+        <name>SolveStep</name>
+        <qualifiedname>PySysLinkBase::IOdeStepSolver::SolveStep</qualifiedname>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerBackwardStepSolver_1aa54d1961e85f20c77e079eac0414e18a">SolveStep</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerForwardStepSolver_1aa4786d7628bbd7df175cdb9fb838bed3">SolveStep</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a08b8b611f0f41d16ce8cc0462b62a576">SolveStep</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1OdeintStepSolver_1a4c2f2429559cf24b88e73ee199d04531">SolveStep</reimplementedby>
+        <param>
+          <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" line="18" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1IOdeStepSolver_1ab34ac0ce6221a578eeeaa43020a7118b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt;</type>
+        <definition>virtual std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt; PySysLinkBase::IOdeStepSolver::SolveStep</definition>
+        <argsstring>(std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt; systemDerivatives, std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt; systemJacobian, std::vector&lt; double &gt; states_0, double currentTime, double timeStep)</argsstring>
+        <name>SolveStep</name>
+        <qualifiedname>PySysLinkBase::IOdeStepSolver::SolveStep</qualifiedname>
+        <reimplementedby refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a2411fa2f831cd4ff86768a7260916f1a">SolveStep</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerBackwardStepSolver_1aa557dc0dcf10050f0063bb1164c1fc90">SolveStep</reimplementedby>
+        <reimplementedby refid="classPySysLinkBase_1_1EulerForwardStepSolver_1a988401a9486fc534e4a87ab466ebe0f4">SolveStep</reimplementedby>
+        <param>
+          <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>systemDerivatives</declname>
+        </param>
+        <param>
+          <type>std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>systemJacobian</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" line="20" column="32" bodyfile="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" bodystart="20" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PySysLinkBase::EulerBackwardStepSolver</label>
+        <link refid="classPySysLinkBase_1_1EulerBackwardStepSolver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PySysLinkBase::EulerForwardStepSolver</label>
+        <link refid="classPySysLinkBase_1_1EulerForwardStepSolver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::IOdeStepSolver</label>
+        <link refid="classPySysLinkBase_1_1IOdeStepSolver"/>
+      </node>
+      <node id="4">
+        <label>PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1OdeintImplicitStepSolver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PySysLinkBase::OdeintStepSolver&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1OdeintStepSolver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" line="11" column="5" bodyfile="PySysLinkBase/src/ContinuousAndOde/IOdeStepSolver.h" bodystart="12" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1IOdeStepSolver_1a44ecb6b46a609e384e001995554edda3" prot="public" virt="virtual"><scope>PySysLinkBase::IOdeStepSolver</scope><name>IsJacobianNeeded</name></member>
+      <member refid="classPySysLinkBase_1_1IOdeStepSolver_1a659ebf9b823e7ebefe7ed67f9aff9976" prot="public" virt="pure-virtual"><scope>PySysLinkBase::IOdeStepSolver</scope><name>SolveStep</name></member>
+      <member refid="classPySysLinkBase_1_1IOdeStepSolver_1ab34ac0ce6221a578eeeaa43020a7118b" prot="public" virt="virtual"><scope>PySysLinkBase::IOdeStepSolver</scope><name>SolveStep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

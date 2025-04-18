@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1ModelParser" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::ModelParser</compoundname>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1ModelParser_1a34e89ba5717f3e28417d97e012eb20d2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConfigurationValue</type>
+        <definition>ConfigurationValue PySysLinkBase::ModelParser::YamlToConfigurationValue</definition>
+        <argsstring>(const YAML::Node &amp;node)</argsstring>
+        <name>YamlToConfigurationValue</name>
+        <qualifiedname>PySysLinkBase::ModelParser::YamlToConfigurationValue</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ModelParser.h" line="16" column="39" bodyfile="PySysLinkBase/src/ModelParser.cpp" bodystart="65" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1ModelParser_1a09ba2a732bc504c321cc54a85d089b11" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1PortLink" kindref="compound">PortLink</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; PortLink &gt; &gt; PySysLinkBase::ModelParser::ParseLinks</definition>
+        <argsstring>(std::vector&lt; std::map&lt; std::string, ConfigurationValue &gt; &gt; linksConfigurations, const std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &amp;blocks)</argsstring>
+        <name>ParseLinks</name>
+        <qualifiedname>PySysLinkBase::ModelParser::ParseLinks</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::map&lt; std::string, ConfigurationValue &gt; &gt;</type>
+          <declname>linksConfigurations</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &amp;</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ModelParser.h" line="17" column="32" bodyfile="PySysLinkBase/src/ModelParser.cpp" bodystart="202" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1ModelParser_1a3aec30c9ebb769fbffa5dfd39a0f26da" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; PySysLinkBase::ModelParser::ParseBlocks</definition>
+        <argsstring>(std::vector&lt; std::map&lt; std::string, ConfigurationValue &gt; &gt; blocksConfigurations, const std::map&lt; std::string, std::shared_ptr&lt; IBlockFactory &gt; &gt; &amp;blockFactories, std::shared_ptr&lt; IBlockEventsHandler &gt; blockEventsHandler)</argsstring>
+        <name>ParseBlocks</name>
+        <qualifiedname>PySysLinkBase::ModelParser::ParseBlocks</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::map&lt; std::string, ConfigurationValue &gt; &gt;</type>
+          <declname>blocksConfigurations</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IBlockFactory" kindref="compound">IBlockFactory</ref> &gt; &gt; &amp;</type>
+          <declname>blockFactories</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IBlockEventsHandler" kindref="compound">IBlockEventsHandler</ref> &gt;</type>
+          <declname>blockEventsHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ModelParser.h" line="18" column="32" bodyfile="PySysLinkBase/src/ModelParser.cpp" bodystart="212" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1ModelParser_1a861ad8c71868c1147e0e4f3a5cc67517" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt; double &gt; PySysLinkBase::ModelParser::ParseComplex</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>ParseComplex</name>
+        <qualifiedname>PySysLinkBase::ModelParser::ParseComplex</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ModelParser.h" line="19" column="33" bodyfile="PySysLinkBase/src/ModelParser.cpp" bodystart="229" bodyend="259"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1ModelParser_1a33568078733bb26d9e3a90896116c0e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SimulationModel &gt; PySysLinkBase::ModelParser::ParseFromYaml</definition>
+        <argsstring>(std::string filename, const std::map&lt; std::string, std::shared_ptr&lt; IBlockFactory &gt; &gt; &amp;blockFactories, std::shared_ptr&lt; IBlockEventsHandler &gt; blockEventsHandler)</argsstring>
+        <name>ParseFromYaml</name>
+        <qualifiedname>PySysLinkBase::ModelParser::ParseFromYaml</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IBlockFactory" kindref="compound">IBlockFactory</ref> &gt; &gt; &amp;</type>
+          <declname>blockFactories</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IBlockEventsHandler" kindref="compound">IBlockEventsHandler</ref> &gt;</type>
+          <declname>blockEventsHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ModelParser.h" line="22" column="36" bodyfile="PySysLinkBase/src/ModelParser.cpp" bodystart="13" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/ModelParser.h" line="13" column="5" bodyfile="PySysLinkBase/src/ModelParser.h" bodystart="14" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1ModelParser_1a3aec30c9ebb769fbffa5dfd39a0f26da" prot="private" virt="non-virtual"><scope>PySysLinkBase::ModelParser</scope><name>ParseBlocks</name></member>
+      <member refid="classPySysLinkBase_1_1ModelParser_1a861ad8c71868c1147e0e4f3a5cc67517" prot="private" virt="non-virtual"><scope>PySysLinkBase::ModelParser</scope><name>ParseComplex</name></member>
+      <member refid="classPySysLinkBase_1_1ModelParser_1a33568078733bb26d9e3a90896116c0e9" prot="public" virt="non-virtual"><scope>PySysLinkBase::ModelParser</scope><name>ParseFromYaml</name></member>
+      <member refid="classPySysLinkBase_1_1ModelParser_1a09ba2a732bc504c321cc54a85d089b11" prot="private" virt="non-virtual"><scope>PySysLinkBase::ModelParser</scope><name>ParseLinks</name></member>
+      <member refid="classPySysLinkBase_1_1ModelParser_1a34e89ba5717f3e28417d97e012eb20d2" prot="private" virt="non-virtual"><scope>PySysLinkBase::ModelParser</scope><name>YamlToConfigurationValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

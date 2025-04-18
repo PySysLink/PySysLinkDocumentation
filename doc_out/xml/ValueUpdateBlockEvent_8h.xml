@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="ValueUpdateBlockEvent_8h" kind="file" language="C++">
+    <compoundname>ValueUpdateBlockEvent.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="FullySupportedSignalValue_8h" local="yes">../FullySupportedSignalValue.h</includes>
+    <includes refid="BlockEvent_8h" local="yes">BlockEvent.h</includes>
+    <includedby refid="BlockEventsHandler_8cpp" local="yes">PySysLinkBase/src/BlockEventsHandler.cpp</includedby>
+    <includedby refid="BlockEventsHandler_8h" local="yes">PySysLinkBase/src/BlockEventsHandler.h</includedby>
+    <includedby refid="IBlockEventsHandler_8h" local="yes">PySysLinkBase/src/IBlockEventsHandler.h</includedby>
+    <includedby refid="SimulationManager_8h" local="yes">PySysLinkBase/src/SimulationManager.h</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>BlockEvent.h</label>
+        <link refid="BlockEvent_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h</label>
+        <link refid="ValueUpdateBlockEvent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../FullySupportedSignalValue.h</label>
+        <link refid="FullySupportedSignalValue_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>complex</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>stdexcept</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>variant</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h</label>
+        <link refid="ValueUpdateBlockEvent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PySysLinkBase/src/BlockEventsHandler.h</label>
+        <link refid="BlockEventsHandler_8h_source"/>
+      </node>
+      <node id="5">
+        <label>PySysLinkBase/src/BlockTypeSupportPluginLoader.h</label>
+        <link refid="BlockTypeSupportPluginLoader_8h_source"/>
+      </node>
+      <node id="9">
+        <label>PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h</label>
+        <link refid="BasicOdeSolver_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>PySysLinkBase/src/ContinuousAndOde/ISimulationBlockWithContinuousStates.h</label>
+        <link refid="ISimulationBlockWithContinuousStates_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PySysLinkBase/src/IBlockEventsHandler.h</label>
+        <link refid="IBlockEventsHandler_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PySysLinkBase/src/IBlockFactory.h</label>
+        <link refid="IBlockFactory_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PySysLinkBase/src/ISimulationBlock.h</label>
+        <link refid="ISimulationBlock_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PySysLinkBase/src/ModelParser.h</label>
+        <link refid="ModelParser_8h_source"/>
+      </node>
+      <node id="11">
+        <label>PySysLinkBase/src/PortLink.h</label>
+        <link refid="PortLink_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PySysLinkBase/src/SimulationManager.h</label>
+        <link refid="SimulationManager_8h_source"/>
+      </node>
+      <node id="12">
+        <label>PySysLinkBase/src/SimulationModel.h</label>
+        <link refid="SimulationModel_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" prot="public">PySysLinkBase::ValueUpdateBlockEvent</innerclass>
+    <innernamespace refid="namespacePySysLinkBase">PySysLinkBase</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SRC_BLOCK_EVENTS_VALUE_UPDATE_BLOCK_EVENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRC_BLOCK_EVENTS_VALUE_UPDATE_BLOCK_EVENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../FullySupportedSignalValue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BlockEvent.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">PySysLinkBase</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" kindref="compound">ValueUpdateBlockEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classPySysLinkBase_1_1BlockEvent" kindref="compound">BlockEvent</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>simulationTime;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>valueId;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FullySupportedSignalValue<sp/>value;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" kindref="compound">ValueUpdateBlockEvent</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>simulationTime,<sp/>std::string<sp/>valueId,<sp/>FullySupportedSignalValue<sp/>value)<sp/>:<sp/>simulationTime(simulationTime),<sp/>valueId(valueId),<sp/>value(value),<sp/><ref refid="classPySysLinkBase_1_1BlockEvent" kindref="compound">BlockEvent</ref>(</highlight><highlight class="stringliteral">&quot;ValueUpdate&quot;</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" kindref="compound">~ValueUpdateBlockEvent</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>PySysLinkBase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_BLOCK_EVENTS_VALUE_UPDATE_BLOCK_EVENT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h"/>
+  </compounddef>
+</doxygen>

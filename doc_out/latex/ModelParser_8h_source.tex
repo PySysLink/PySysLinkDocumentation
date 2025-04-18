@@ -1,0 +1,33 @@
+\doxysection{Model\+Parser.\+h}
+\hypertarget{ModelParser_8h_source}{}\label{ModelParser_8h_source}\index{PySysLinkBase/src/ModelParser.h@{PySysLinkBase/src/ModelParser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_PY\_SYS\_LINK\_BASE\_MODEL\_PARSER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_PY\_SYS\_LINK\_BASE\_MODEL\_PARSER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SimulationModel.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ConfigurationValue.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <yaml-\/cpp/yaml.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}IBlockFactory.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1ModelParser}{ModelParser}}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ ConfigurationValue\ YamlToConfigurationValue(\textcolor{keyword}{const}\ YAML::Node\&\ node);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::shared\_ptr<PortLink>>\ ParseLinks(std::vector<std::map<std::string,\ ConfigurationValue>>\ linksConfigurations,\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<ISimulationBlock>>\&\ blocks);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::shared\_ptr<ISimulationBlock>>\ ParseBlocks(std::vector<std::map<std::string,\ ConfigurationValue>>\ blocksConfigurations,\ \textcolor{keyword}{const}\ std::map<std::string,\ std::shared\_ptr<IBlockFactory>>\&\ blockFactories,\ std::shared\_ptr<IBlockEventsHandler>\ blockEventsHandler);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::complex<double>\ ParseComplex(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<SimulationModel>\ ParseFromYaml(std::string\ filename,\ \textcolor{keyword}{const}\ std::map<std::string,\ std::shared\_ptr<IBlockFactory>>\&\ blockFactories,\ std::shared\_ptr<IBlockEventsHandler>\ blockEventsHandler);}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_PY\_SYS\_LINK\_BASE\_MODEL\_PARSER\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

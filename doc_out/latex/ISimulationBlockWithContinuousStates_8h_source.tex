@@ -1,0 +1,32 @@
+\doxysection{ISimulation\+Block\+With\+Continuous\+States.\+h}
+\hypertarget{ISimulationBlockWithContinuousStates_8h_source}{}\label{ISimulationBlockWithContinuousStates_8h_source}\index{PySysLinkBase/src/ContinuousAndOde/ISimulationBlockWithContinuousStates.h@{PySysLinkBase/src/ContinuousAndOde/ISimulationBlockWithContinuousStates.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PYSYSLINK\_BASE\_SRC\_CPP\_LIBRARIES\_PY\_SYS\_LINK\_BASE\_SRC\_CONTINUOUS\_AND\_ODE\_ISIMULATION\_BLOCK\_WITH\_CONTINUOUS\_STATES}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PYSYSLINK\_BASE\_SRC\_CPP\_LIBRARIES\_PY\_SYS\_LINK\_BASE\_SRC\_CONTINUOUS\_AND\_ODE\_ISIMULATION\_BLOCK\_WITH\_CONTINUOUS\_STATES}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../ISimulationBlock.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates}{ISimulationBlockWithContinuousStates}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{ISimulationBlock}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates}{ISimulationBlockWithContinuousStates}}(std::map<std::string,\ ConfigurationValue>\ blockConfiguration,\ std::shared\_ptr<IBlockEventsHandler>\ blockEventsHandler)\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{ISimulationBlock}}(blockConfiguration,\ blockEventsHandler)\ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::vector<double>\ GetContinuousStates()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetContinuousStates(std::vector<double>\ newStates)\ =\ 0;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::vector<double>\ GetContinuousStateDerivatives(\textcolor{keyword}{const}\ std::shared\_ptr<PySysLinkBase::SampleTime>\ sampleTime,\ \textcolor{keywordtype}{double}\ currentTime)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PYSYSLINK\_BASE\_SRC\_CPP\_LIBRARIES\_PY\_SYS\_LINK\_BASE\_SRC\_CONTINUOUS\_AND\_ODE\_ISIMULATION\_BLOCK\_WITH\_CONTINUOUS\_STATES\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

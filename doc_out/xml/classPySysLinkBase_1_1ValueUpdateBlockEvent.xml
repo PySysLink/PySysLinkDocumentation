@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1ValueUpdateBlockEvent" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::ValueUpdateBlockEvent</compoundname>
+    <basecompoundref refid="classPySysLinkBase_1_1BlockEvent" prot="public" virt="non-virtual">PySysLinkBase::BlockEvent</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a7bae0c8be7cc7c45aef1a15acced47dc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::ValueUpdateBlockEvent::simulationTime</definition>
+        <argsstring></argsstring>
+        <name>simulationTime</name>
+        <qualifiedname>PySysLinkBase::ValueUpdateBlockEvent::simulationTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="13" column="16" bodyfile="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a19b59e00295db15a868f41fdd33aea6a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PySysLinkBase::ValueUpdateBlockEvent::valueId</definition>
+        <argsstring></argsstring>
+        <name>valueId</name>
+        <qualifiedname>PySysLinkBase::ValueUpdateBlockEvent::valueId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="14" column="21" bodyfile="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a2deb10a26e036668ac0d8e7c2ef9481b" prot="public" static="no" mutable="no">
+        <type>FullySupportedSignalValue</type>
+        <definition>FullySupportedSignalValue PySysLinkBase::ValueUpdateBlockEvent::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>PySysLinkBase::ValueUpdateBlockEvent::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="15" column="35" bodyfile="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1ValueUpdateBlockEvent_1ac56d27eca732134855ffaca8db534962" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::ValueUpdateBlockEvent::ValueUpdateBlockEvent</definition>
+        <argsstring>(double simulationTime, std::string valueId, FullySupportedSignalValue value)</argsstring>
+        <name>ValueUpdateBlockEvent</name>
+        <qualifiedname>PySysLinkBase::ValueUpdateBlockEvent::ValueUpdateBlockEvent</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>simulationTime</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>valueId</declname>
+        </param>
+        <param>
+          <type>FullySupportedSignalValue</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="16" column="9" bodyfile="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a3a1868ffe76b982e7264d2462aadc8de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::ValueUpdateBlockEvent::~ValueUpdateBlockEvent</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ValueUpdateBlockEvent</name>
+        <qualifiedname>PySysLinkBase::ValueUpdateBlockEvent::~ValueUpdateBlockEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="18" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PySysLinkBase::BlockEvent</label>
+        <link refid="classPySysLinkBase_1_1BlockEvent"/>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::ValueUpdateBlockEvent</label>
+        <link refid="classPySysLinkBase_1_1ValueUpdateBlockEvent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>PySysLinkBase::BlockEvent</label>
+        <link refid="classPySysLinkBase_1_1BlockEvent"/>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::ValueUpdateBlockEvent</label>
+        <link refid="classPySysLinkBase_1_1ValueUpdateBlockEvent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" line="10" column="5" bodyfile="PySysLinkBase/src/BlockEvents/ValueUpdateBlockEvent.h" bodystart="11" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1BlockEvent_1af0ba1ff27c2eba716a9807b8fff514a7" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>BlockEvent</name></member>
+      <member refid="classPySysLinkBase_1_1BlockEvent_1a75559a44460c575d70720077f71e56f9" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>eventTypeId</name></member>
+      <member refid="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a7bae0c8be7cc7c45aef1a15acced47dc" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>simulationTime</name></member>
+      <member refid="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a2deb10a26e036668ac0d8e7c2ef9481b" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>value</name></member>
+      <member refid="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a19b59e00295db15a868f41fdd33aea6a" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>valueId</name></member>
+      <member refid="classPySysLinkBase_1_1ValueUpdateBlockEvent_1ac56d27eca732134855ffaca8db534962" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>ValueUpdateBlockEvent</name></member>
+      <member refid="classPySysLinkBase_1_1BlockEvent_1a308f3d08c20b6253664ca4990ee97170" prot="public" virt="virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>~BlockEvent</name></member>
+      <member refid="classPySysLinkBase_1_1ValueUpdateBlockEvent_1a3a1868ffe76b982e7264d2462aadc8de" prot="public" virt="non-virtual"><scope>PySysLinkBase::ValueUpdateBlockEvent</scope><name>~ValueUpdateBlockEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

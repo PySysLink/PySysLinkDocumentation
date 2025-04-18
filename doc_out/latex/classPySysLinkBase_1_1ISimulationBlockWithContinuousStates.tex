@@ -1,0 +1,104 @@
+\doxysection{Py\+Sys\+Link\+Base\+::ISimulation\+Block\+With\+Continuous\+States Class Reference}
+\hypertarget{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates}{}\label{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates}\index{PySysLinkBase::ISimulationBlockWithContinuousStates@{PySysLinkBase::ISimulationBlockWithContinuousStates}}
+
+
+Inheritance diagram for Py\+Sys\+Link\+Base\+::ISimulation\+Block\+With\+Continuous\+States\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Py\+Sys\+Link\+Base\+::ISimulation\+Block\+With\+Continuous\+States\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a92075091722c7727103aa188447e0e9f}\label{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a92075091722c7727103aa188447e0e9f} 
+{\bfseries ISimulation\+Block\+With\+Continuous\+States} (std\+::map$<$ std\+::string, Configuration\+Value $>$ block\+Configuration, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1IBlockEventsHandler}{IBlock\+Events\+Handler}} $>$ block\+Events\+Handler)
+\item 
+\Hypertarget{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a27bad9354a528e4dcf90dba2cce90766}\label{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a27bad9354a528e4dcf90dba2cce90766} 
+virtual const std\+::vector$<$ double $>$ {\bfseries Get\+Continuous\+States} () const =0
+\item 
+\Hypertarget{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a26fc1c4b39dbf791f5e4cea575a001f1}\label{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a26fc1c4b39dbf791f5e4cea575a001f1} 
+virtual void {\bfseries Set\+Continuous\+States} (std\+::vector$<$ double $>$ new\+States)=0
+\item 
+\Hypertarget{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a1a2400f534a0c8e7719f1162dbddec83}\label{classPySysLinkBase_1_1ISimulationBlockWithContinuousStates_a1a2400f534a0c8e7719f1162dbddec83} 
+virtual const std\+::vector$<$ double $>$ {\bfseries Get\+Continuous\+State\+Derivatives} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$ sample\+Time, double current\+Time) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{Py\+Sys\+Link\+Base\+::\+ISimulation\+Block}}}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string {\bfseries Get\+Id} () const
+\item 
+const std\+::string {\bfseries Get\+Name} () const
+\item 
+{\bfseries ISimulation\+Block} (std\+::map$<$ std\+::string, Configuration\+Value $>$ block\+Configuration, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1IBlockEventsHandler}{IBlock\+Events\+Handler}} $>$ block\+Events\+Handler)
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Sample\+Time}} $>$ {\bfseries Get\+Sample\+Time} () const =0
+\item 
+virtual void {\bfseries Set\+Sample\+Time} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Sample\+Time}} $>$ sample\+Time)=0
+\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1InputPort}{Py\+Sys\+Link\+Base\+::\+Input\+Port}} $>$ $>$ {\bfseries Get\+Input\+Ports} () const =0
+\item 
+virtual const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1OutputPort}{Py\+Sys\+Link\+Base\+::\+Output\+Port}} $>$ $>$ {\bfseries Get\+Output\+Ports} () const =0
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1OutputPort}{Py\+Sys\+Link\+Base\+::\+Output\+Port}} $>$ $>$ {\bfseries Compute\+Outputs\+Of\+Block} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$ sample\+Time, double current\+Time, bool is\+Minor\+Step=false)
+\item 
+virtual const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1OutputPort}{Py\+Sys\+Link\+Base\+::\+Output\+Port}} $>$ $>$ {\bfseries \+\_\+\+Compute\+Outputs\+Of\+Block} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$ sample\+Time, double current\+Time, bool is\+Minor\+Step=false)=0
+\item 
+bool {\bfseries Is\+Block\+Free\+Source} () const
+\item 
+bool {\bfseries Is\+Input\+Direct\+Block\+Chain\+End} (int input\+Index) const
+\item 
+void {\bfseries Notify\+Event} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1BlockEvent}{Py\+Sys\+Link\+Base\+::\+Block\+Event}} $>$ block\+Event) const
+\item 
+bool {\bfseries Try\+Update\+Configuration\+Value} (std\+::string key\+Name, Configuration\+Value value)
+\item 
+virtual bool {\bfseries \+\_\+\+Try\+Update\+Configuration\+Value} (std\+::string key\+Name, Configuration\+Value value)=0
+\item 
+void {\bfseries Register\+Read\+Inputs\+Callbacks} (std\+::function$<$ void(const std\+::string, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1InputPort}{Py\+Sys\+Link\+Base\+::\+Input\+Port}} $>$ $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$, double)$>$ callback)
+\item 
+void {\bfseries Register\+Calculate\+Output\+Callbacks} (std\+::function$<$ void(const std\+::string, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1OutputPort}{Py\+Sys\+Link\+Base\+::\+Output\+Port}} $>$ $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$, double)$>$ callback)
+\item 
+void {\bfseries Register\+Update\+Configuration\+Value\+Callbacks} (std\+::function$<$ void(const std\+::string, const std\+::string, const Configuration\+Value)$>$ callback)
+\item 
+virtual const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ {\bfseries Get\+Events} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$ sample\+Time, double event\+Time, std\+::vector$<$ double $>$ event\+Time\+States, bool include\+Known\+Events=false) const
+\item 
+virtual const std\+::vector$<$ double $>$ {\bfseries Get\+Known\+Events} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$ resolved\+Sample\+Time, double simulation\+Start\+Time, double simulation\+End\+Time) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{Py\+Sys\+Link\+Base\+::\+ISimulation\+Block}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{ISimulation\+Block}} $>$ {\bfseries Find\+Block\+By\+Id} (std\+::string id, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{ISimulation\+Block}} $>$ $>$ \&blocks\+To\+Find)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPySysLinkBase_1_1ISimulationBlock}{Py\+Sys\+Link\+Base\+::\+ISimulation\+Block}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1IBlockEventsHandler}{IBlock\+Events\+Handler}} $>$ {\bfseries block\+Events\+Handler}
+\item 
+std\+::string {\bfseries name}
+\item 
+std\+::string {\bfseries id}
+\item 
+std\+::vector$<$ std\+::function$<$ void(const std\+::string, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1InputPort}{Py\+Sys\+Link\+Base\+::\+Input\+Port}} $>$ $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$, double)$>$ $>$ {\bfseries read\+Input\+Callbacks}
+\item 
+std\+::vector$<$ std\+::function$<$ void(const std\+::string, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1OutputPort}{Py\+Sys\+Link\+Base\+::\+Output\+Port}} $>$ $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPySysLinkBase_1_1SampleTime}{Py\+Sys\+Link\+Base\+::\+Sample\+Time}} $>$, double)$>$ $>$ {\bfseries calculate\+Output\+Callbacks}
+\item 
+std\+::vector$<$ std\+::function$<$ void(const std\+::string, const std\+::string, const Configuration\+Value)$>$ $>$ {\bfseries update\+Configuration\+Value\+Callbacks}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Py\+Sys\+Link\+Base/src/\+Continuous\+And\+Ode/ISimulation\+Block\+With\+Continuous\+States.\+h\end{DoxyCompactItemize}

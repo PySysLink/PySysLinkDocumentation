@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1SignalValue" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::SignalValue</compoundname>
+    <basecompoundref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" prot="public" virt="non-virtual">PySysLinkBase::UnknownTypeSignalValue</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SignalValue_1abeb253d2126e73fb33e65f4e91615085" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T PySysLinkBase::SignalValue&lt; T &gt;::payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <qualifiedname>PySysLinkBase::SignalValue::payload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="14" column="15" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1a78ce195542cc0c4037f3d01657a7dc94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::SignalValue&lt; T &gt;::SignalValue</definition>
+        <argsstring>(T initialPayload)</argsstring>
+        <name>SignalValue</name>
+        <qualifiedname>PySysLinkBase::SignalValue::SignalValue</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>initialPayload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="16" column="13" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1a399faf4d113201bc867497fbe1b682ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::SignalValue&lt; T &gt;::SignalValue</definition>
+        <argsstring>(const SignalValue &amp;other)=default</argsstring>
+        <name>SignalValue</name>
+        <qualifiedname>PySysLinkBase::SignalValue::SignalValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classPySysLinkBase_1_1SignalValue" kindref="compound">SignalValue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="18" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1a989675b66e3bca1016a97e3766145c3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" kindref="compound">UnknownTypeSignalValue</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; UnknownTypeSignalValue &gt; PySysLinkBase::SignalValue&lt; T &gt;::clone</definition>
+        <argsstring>() const override</argsstring>
+        <name>clone</name>
+        <qualifiedname>PySysLinkBase::SignalValue::clone</qualifiedname>
+        <reimplements refid="classPySysLinkBase_1_1UnknownTypeSignalValue_1a8213552cb0c97b4d00de709df865cc72">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="20" column="29" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1ad026cd40f1fac18eac4e8d23d9f29612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string PySysLinkBase::SignalValue&lt; T &gt;::GetTypeId</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTypeId</name>
+        <qualifiedname>PySysLinkBase::SignalValue::GetTypeId</qualifiedname>
+        <reimplements refid="classPySysLinkBase_1_1UnknownTypeSignalValue_1afbc854601226dc6b1d29a6da868e9594">GetTypeId</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="24" column="31" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1a3259998795e32d1460d15c16c331b975" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T</type>
+        <definition>const T PySysLinkBase::SignalValue&lt; T &gt;::GetPayload</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPayload</name>
+        <qualifiedname>PySysLinkBase::SignalValue::GetPayload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="29" column="21" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SignalValue_1a2e99db0a0f5c1a63a336d7f2ea25ff84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SignalValue&lt; T &gt;::SetPayload</definition>
+        <argsstring>(T newPayload)</argsstring>
+        <name>SetPayload</name>
+        <qualifiedname>PySysLinkBase::SignalValue::SetPayload</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>newPayload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="34" column="18" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="34" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PySysLinkBase::SignalValue&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1SignalValue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PySysLinkBase::UnknownTypeSignalValue</label>
+        <link refid="classPySysLinkBase_1_1UnknownTypeSignalValue"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PySysLinkBase::SignalValue&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1SignalValue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PySysLinkBase::UnknownTypeSignalValue</label>
+        <link refid="classPySysLinkBase_1_1UnknownTypeSignalValue"/>
+      </node>
+    </collaborationgraph>
+    <location file="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" line="11" column="5" bodyfile="PySysLinkBase/src/PortsAndSignalValues/SignalValue.h" bodystart="12" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1SignalValue_1a989675b66e3bca1016a97e3766145c3e" prot="public" virt="virtual"><scope>PySysLinkBase::SignalValue</scope><name>clone</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1a3259998795e32d1460d15c16c331b975" prot="public" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>GetPayload</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1ad026cd40f1fac18eac4e8d23d9f29612" prot="public" virt="virtual"><scope>PySysLinkBase::SignalValue</scope><name>GetTypeId</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1abeb253d2126e73fb33e65f4e91615085" prot="private" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>payload</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1a2e99db0a0f5c1a63a336d7f2ea25ff84" prot="public" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>SetPayload</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1a78ce195542cc0c4037f3d01657a7dc94" prot="public" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>SignalValue</name></member>
+      <member refid="classPySysLinkBase_1_1SignalValue_1a399faf4d113201bc867497fbe1b682ad" prot="public" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>SignalValue</name></member>
+      <member refid="classPySysLinkBase_1_1UnknownTypeSignalValue_1a932a9489cba02f8d974f5b4f470de283" prot="public" virt="non-virtual"><scope>PySysLinkBase::SignalValue</scope><name>TryCastToTyped</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

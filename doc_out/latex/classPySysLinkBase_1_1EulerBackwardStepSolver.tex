@@ -1,0 +1,73 @@
+\doxysection{Py\+Sys\+Link\+Base\+::Euler\+Backward\+Step\+Solver Class Reference}
+\hypertarget{classPySysLinkBase_1_1EulerBackwardStepSolver}{}\label{classPySysLinkBase_1_1EulerBackwardStepSolver}\index{PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}}
+
+
+Inheritance diagram for Py\+Sys\+Link\+Base\+::Euler\+Backward\+Step\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classPySysLinkBase_1_1EulerBackwardStepSolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Py\+Sys\+Link\+Base\+::Euler\+Backward\+Step\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classPySysLinkBase_1_1EulerBackwardStepSolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPySysLinkBase_1_1EulerBackwardStepSolver_a25881b06492521a7666dd2e5e1fa09bd}\label{classPySysLinkBase_1_1EulerBackwardStepSolver_a25881b06492521a7666dd2e5e1fa09bd} 
+{\bfseries Euler\+Backward\+Step\+Solver} (double maximum\+Iterations=50, double tolerance=1e-\/6)
+\item 
+virtual std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1EulerBackwardStepSolver_aa54d1961e85f20c77e079eac0414e18a}{Solve\+Step}} (std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$ system, std\+::vector$<$ double $>$ states\+\_\+0, double current\+Time, double time\+Step)
+\item 
+virtual std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1EulerBackwardStepSolver_aa557dc0dcf10050f0063bb1164c1fc90}{Solve\+Step}} (std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$ system\+Derivatives, std\+::function$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$(std\+::vector$<$ double $>$, double)$>$ system\+Jacobian, std\+::vector$<$ double $>$ states\+\_\+0, double current\+Time, double time\+Step)
+\item 
+virtual bool \mbox{\hyperlink{classPySysLinkBase_1_1EulerBackwardStepSolver_acf67347a72a29e880fe17d3219f5be82}{Is\+Jacobian\+Needed}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPySysLinkBase_1_1EulerBackwardStepSolver_acf67347a72a29e880fe17d3219f5be82}\label{classPySysLinkBase_1_1EulerBackwardStepSolver_acf67347a72a29e880fe17d3219f5be82} 
+\index{PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}!IsJacobianNeeded@{IsJacobianNeeded}}
+\index{IsJacobianNeeded@{IsJacobianNeeded}!PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}}
+\doxysubsubsection{\texorpdfstring{IsJacobianNeeded()}{IsJacobianNeeded()}}
+{\footnotesize\ttfamily virtual bool Py\+Sys\+Link\+Base\+::\+Euler\+Backward\+Step\+Solver\+::\+Is\+Jacobian\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+\Hypertarget{classPySysLinkBase_1_1EulerBackwardStepSolver_aa54d1961e85f20c77e079eac0414e18a}\label{classPySysLinkBase_1_1EulerBackwardStepSolver_aa54d1961e85f20c77e079eac0414e18a} 
+\index{PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}!SolveStep@{SolveStep}}
+\index{SolveStep@{SolveStep}!PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}}
+\doxysubsubsection{\texorpdfstring{SolveStep()}{SolveStep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ Py\+Sys\+Link\+Base\+::\+Euler\+Backward\+Step\+Solver\+::\+Solve\+Step (\begin{DoxyParamCaption}\item[{std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$}]{system,  }\item[{std\+::vector$<$ double $>$}]{states\+\_\+0,  }\item[{double}]{current\+Time,  }\item[{double}]{time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+\Hypertarget{classPySysLinkBase_1_1EulerBackwardStepSolver_aa557dc0dcf10050f0063bb1164c1fc90}\label{classPySysLinkBase_1_1EulerBackwardStepSolver_aa557dc0dcf10050f0063bb1164c1fc90} 
+\index{PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}!SolveStep@{SolveStep}}
+\index{SolveStep@{SolveStep}!PySysLinkBase::EulerBackwardStepSolver@{PySysLinkBase::EulerBackwardStepSolver}}
+\doxysubsubsection{\texorpdfstring{SolveStep()}{SolveStep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ Py\+Sys\+Link\+Base\+::\+Euler\+Backward\+Step\+Solver\+::\+Solve\+Step (\begin{DoxyParamCaption}\item[{std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$}]{system\+Derivatives,  }\item[{std\+::function$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$(std\+::vector$<$ double $>$, double)$>$}]{system\+Jacobian,  }\item[{std\+::vector$<$ double $>$}]{states\+\_\+0,  }\item[{double}]{current\+Time,  }\item[{double}]{time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Py\+Sys\+Link\+Base/src/\+Continuous\+And\+Ode/Euler\+Backward\+Step\+Solver.\+h\item 
+Py\+Sys\+Link\+Base/src/\+Continuous\+And\+Ode/Euler\+Backward\+Step\+Solver.\+cpp\end{DoxyCompactItemize}

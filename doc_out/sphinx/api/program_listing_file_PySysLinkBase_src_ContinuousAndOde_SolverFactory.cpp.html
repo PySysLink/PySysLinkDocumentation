@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File SolverFactory.cpp &mdash; PySysLink 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PySysLink
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PySysLink</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File SolverFactory.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_PySysLinkBase_src_ContinuousAndOde_SolverFactory.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-solverfactory-cpp">
+<span id="program-listing-file-pysyslinkbase-src-continuousandode-solverfactory-cpp"></span><h1>Program Listing for File SolverFactory.cpp<a class="headerlink" href="#program-listing-for-file-solverfactory-cpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file_PySysLinkBase_src_ContinuousAndOde_SolverFactory.cpp.html#file-pysyslinkbase-src-continuousandode-solverfactory-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">PySysLinkBase/src/ContinuousAndOde/SolverFactory.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SolverFactory.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OdeintStepSolver.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EulerForwardStepSolver.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;EulerBackwardStepSolver.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OdeintImplicitStepSolver.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;spdlog/spdlog.h&quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PySysLinkBase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">IOdeStepSolver</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SolverFactory</span><span class="o">::</span><span class="n">CreateOdeStepSolver</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">ConfigurationValue</span><span class="o">&gt;</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">solverType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solverType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;odeint&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">controlledSolver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;ControlledSolver&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">absoluteTolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-8</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-8</span><span class="p">;</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">absoluteTolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AbsoluteTolerance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">spdlog</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;default_pysyslink&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Absolute tolerance not found in configuration, using default value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">absoluteTolerance</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">relativeTolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;RelativeTolerance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">spdlog</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;default_pysyslink&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Relative tolerance not found in configuration, using default value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">controlledSolver</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;runge_kutta_cash_karp54&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">controlledStepper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_cash_karp54</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="n">controlledStepperType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_cash_karp54</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">()));</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">OdeintStepSolver</span><span class="o">&lt;</span><span class="n">controlledStepperType</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">controlledStepper</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">controlledSolver</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;runge_kutta_dopri5&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">controlledStepper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_dopri5</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="n">controlledStepperType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_dopri5</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">()));</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">OdeintStepSolver</span><span class="o">&lt;</span><span class="n">controlledStepperType</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">controlledStepper</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">controlledSolver</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;runge_kutta_fehlberg78&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">controlledStepper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_fehlberg78</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="n">controlledStepperType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">make_controlled</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">runge_kutta_fehlberg78</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">()));</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">OdeintStepSolver</span><span class="o">&lt;</span><span class="n">controlledStepperType</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">controlledStepper</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">controlledSolver</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;rosenbrock4_controller&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// TODO: this does not seem to work</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">controlledStepper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">rosenbrock4_controller</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">rosenbrock4</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">absoluteTolerance</span><span class="p">,</span><span class="w"> </span><span class="n">relativeTolerance</span><span class="p">);</span>
+<span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="n">controlledStepperType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">rosenbrock4_controller</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">numeric</span><span class="o">::</span><span class="n">odeint</span><span class="o">::</span><span class="n">rosenbrock4</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">OdeintImplicitStepSolver</span><span class="o">&lt;</span><span class="n">controlledStepperType</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">controlledStepper</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// else if (controlledSolver == &quot;bulirsch_stoer&quot;)</span>
+<span class="w">            </span><span class="c1">// {</span>
+<span class="w">            </span><span class="c1">//     auto controlledStepper = boost::numeric::odeint::make_controlled(absoluteTolerance, relativeTolerance, boost::numeric::odeint::bulirsch_stoer&lt;std::vector&lt;double&gt;&gt;());</span>
+<span class="w">            </span><span class="c1">//     using controlledStepperType = decltype(boost::numeric::odeint::make_controlled(absoluteTolerance, relativeTolerance, boost::numeric::odeint::bulirsch_stoer&lt;std::vector&lt;double&gt;&gt;()));</span>
+<span class="w">            </span><span class="c1">//     return std::make_shared&lt;OdeintStepSolver&lt;controlledStepperType&gt;&gt;(controlledStepper);</span>
+<span class="w">            </span><span class="c1">// }</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">(</span><span class="s">&quot;Controlled solver not recognized&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solverType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;EulerForward&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">EulerForwardStepSolver</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solverType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;EulerBackward&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">maximumIterations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">tolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-6</span><span class="p">;</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">maximumIterations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MaximumIterations&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">spdlog</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;default_pysyslink&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Maximum iterations not found in configuration, using default value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">maximumIterations</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">try</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">tolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurationValueManager</span><span class="o">::</span><span class="n">TryGetConfigurationValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Tolerance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solverConfiguration</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">spdlog</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;default_pysyslink&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Tolerance not found in configuration, using default value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tolerance</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">EulerBackwardStepSolver</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maximumIterations</span><span class="p">,</span><span class="w"> </span><span class="n">tolerance</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">(</span><span class="s">&quot;Solver type not recognized&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace PySysLinkBase</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Pello Usabiaga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

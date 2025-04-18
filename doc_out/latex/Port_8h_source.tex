@@ -1,0 +1,39 @@
+\doxysection{Port.\+h}
+\hypertarget{Port_8h_source}{}\label{Port_8h_source}\index{PySysLinkBase/src/PortsAndSignalValues/Port.h@{PySysLinkBase/src/PortsAndSignalValues/Port.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_PORTS\_AND\_SIGNAL\_VALUES\_PORT}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_PORTS\_AND\_SIGNAL\_VALUES\_PORT}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}UnknownTypeSignalValue.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }ISimulationBlock;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1Port}{Port}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::shared\_ptr<UnknownTypeSignalValue>\ value;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPySysLinkBase_1_1Port}{Port}}(std::shared\_ptr<UnknownTypeSignalValue>\ value);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TryCopyValueToPort(\mbox{\hyperlink{classPySysLinkBase_1_1Port}{Port}}\&\ otherPort)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetValue(std::shared\_ptr<UnknownTypeSignalValue>\ value);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::shared\_ptr<UnknownTypeSignalValue>\ GetValue()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPySysLinkBase_1_1Port}{Port}}\&\ rhs)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this}\ ==\ \&rhs;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_PORTS\_AND\_SIGNAL\_VALUES\_PORT\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

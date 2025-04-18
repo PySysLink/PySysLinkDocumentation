@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1SpdlogManager" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::SpdlogManager</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1SpdlogManager_1a9275121a6db91ef235fab812090ba2d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SpdlogManager::ConfigureDefaultLogger</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureDefaultLogger</name>
+        <qualifiedname>PySysLinkBase::SpdlogManager::ConfigureDefaultLogger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SpdlogManager.h" line="19" column="21" bodyfile="PySysLinkBase/src/SpdlogManager.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SpdlogManager_1ad1e452bb418e00eed0f7b8a85b9b73be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SpdlogManager::SetLogLevel</definition>
+        <argsstring>(LogLevel logLevel)</argsstring>
+        <name>SetLogLevel</name>
+        <qualifiedname>PySysLinkBase::SpdlogManager::SetLogLevel</qualifiedname>
+        <param>
+          <type>LogLevel</type>
+          <declname>logLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SpdlogManager.h" line="20" column="21" bodyfile="PySysLinkBase/src/SpdlogManager.cpp" bodystart="12" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/SpdlogManager.h" line="16" column="5" bodyfile="PySysLinkBase/src/SpdlogManager.h" bodystart="17" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1SpdlogManager_1a9275121a6db91ef235fab812090ba2d1" prot="public" virt="non-virtual"><scope>PySysLinkBase::SpdlogManager</scope><name>ConfigureDefaultLogger</name></member>
+      <member refid="classPySysLinkBase_1_1SpdlogManager_1ad1e452bb418e00eed0f7b8a85b9b73be" prot="public" virt="non-virtual"><scope>PySysLinkBase::SpdlogManager</scope><name>SetLogLevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

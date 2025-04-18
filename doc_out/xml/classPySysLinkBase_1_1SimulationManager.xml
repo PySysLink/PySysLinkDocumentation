@@ -1,0 +1,697 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1SimulationManager" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::SimulationManager</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1aec7fff12324988d551cda9570f216fb5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::SimulationManager::hasRunFullSimulation</definition>
+        <argsstring></argsstring>
+        <name>hasRunFullSimulation</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::hasRunFullSimulation</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="27" column="14" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1aa2a39f9f45cd528f0d58898b682a4df9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::SimulationManager::isRunningStepByStep</definition>
+        <argsstring></argsstring>
+        <name>isRunningStepByStep</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::isRunningStepByStep</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="28" column="14" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1ac6325742335e145a5ae99f594df67a25" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::SimulationManager::isFirstStepDone</definition>
+        <argsstring></argsstring>
+        <name>isFirstStepDone</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::isFirstStepDone</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="29" column="14" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a679a0a3b9344ad37284b3889348f3b48" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;SampleTime&gt; &gt; PySysLinkBase::SimulationManager::nextSampleTimesToProcess</definition>
+        <argsstring></argsstring>
+        <name>nextSampleTimesToProcess</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::nextSampleTimesToProcess</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="30" column="21" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a8db806e68e6f35756dce87650ea3b201" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1BasicOdeSolver" kindref="compound">BasicOdeSolver</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::shared_ptr&lt;SampleTime&gt;, std::shared_ptr&lt;BasicOdeSolver&gt; &gt; PySysLinkBase::SimulationManager::odeSolversForEachContinuousSampleTimeGroup</definition>
+        <argsstring></argsstring>
+        <name>odeSolversForEachContinuousSampleTimeGroup</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::odeSolversForEachContinuousSampleTimeGroup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="45" column="18" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1af212f18b126d91d816e23576a8c2f5e2" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::shared_ptr&lt;SampleTime&gt;, std::vector&lt;std::shared_ptr&lt;ISimulationBlock&gt; &gt; &gt; PySysLinkBase::SimulationManager::blocksForEachDiscreteSampleTime</definition>
+        <argsstring></argsstring>
+        <name>blocksForEachDiscreteSampleTime</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::blocksForEachDiscreteSampleTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="47" column="18" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a244ee7c66f421940ed519bd7a26c6863" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::shared_ptr&lt;SampleTime&gt;, std::vector&lt;std::shared_ptr&lt;ISimulationBlock&gt; &gt; &gt; PySysLinkBase::SimulationManager::blocksForEachContinuousSampleTimeGroup</definition>
+        <argsstring></argsstring>
+        <name>blocksForEachContinuousSampleTimeGroup</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::blocksForEachContinuousSampleTimeGroup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="48" column="18" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a03d3dba3e7bb1428ff96f146da176943" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ISimulationBlock&gt; &gt; PySysLinkBase::SimulationManager::blocksWithConstantSampleTime</definition>
+        <argsstring></argsstring>
+        <name>blocksWithConstantSampleTime</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::blocksWithConstantSampleTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="49" column="21" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a824a1b0fc6386404ebaeec270fa68753" prot="private" static="no" mutable="no">
+        <type>std::map&lt; double, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;double, std::vector&lt;std::shared_ptr&lt;SampleTime&gt; &gt; &gt; PySysLinkBase::SimulationManager::timeHitsToSampleTimes</definition>
+        <argsstring></argsstring>
+        <name>timeHitsToSampleTimes</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::timeHitsToSampleTimes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="54" column="18" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1ab9dabbe8d7f62448d63f996f4afa34d6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PySysLinkBase::SimulationManager::timeHits</definition>
+        <argsstring></argsstring>
+        <name>timeHits</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::timeHits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="55" column="21" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a149ae1e140572ca4def6937a9ed7f76d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::SimulationManager::currentTime</definition>
+        <argsstring></argsstring>
+        <name>currentTime</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::currentTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="56" column="16" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1ab54022529ac6d2f316aeeb1ddde7f41d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SimulationModel&gt; PySysLinkBase::SimulationManager::simulationModel</definition>
+        <argsstring></argsstring>
+        <name>simulationModel</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::simulationModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="58" column="25" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1adfb7c373775aa3164d850286fa5746f1" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationOptions" kindref="compound">SimulationOptions</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SimulationOptions&gt; PySysLinkBase::SimulationManager::simulationOptions</definition>
+        <argsstring></argsstring>
+        <name>simulationOptions</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::simulationOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="59" column="25" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1adc1c5f0f79cc4bfbd2ab72b05be83ac2" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structPySysLinkBase_1_1SimulationOutput" kindref="compound">SimulationOutput</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SimulationOutput&gt; PySysLinkBase::SimulationManager::simulationOutput</definition>
+        <argsstring></argsstring>
+        <name>simulationOutput</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::simulationOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="61" column="25" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1af97db503406be6be89e52a314e0fed0a" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; const <ref refid="classPySysLinkBase_1_1Port" kindref="compound">Port</ref> *, const <ref refid="classPySysLinkBase_1_1Port" kindref="compound">Port</ref> * &gt;</type>
+        <definition>std::unordered_map&lt;const Port*, const Port*&gt; PySysLinkBase::SimulationManager::portToLogInToAvoidRepetition</definition>
+        <argsstring></argsstring>
+        <name>portToLogInToAvoidRepetition</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::portToLogInToAvoidRepetition</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="69" column="28" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a3daf7beb88090250b187d5719021ba14" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; const <ref refid="classPySysLinkBase_1_1Port" kindref="compound">Port</ref> *, std::pair&lt; std::string, int &gt; &gt;</type>
+        <definition>std::unordered_map&lt;const Port*, std::pair&lt;std::string, int&gt; &gt; PySysLinkBase::SimulationManager::loggedPortToCorrespondentBlockIdAndOutputPortIndex</definition>
+        <argsstring></argsstring>
+        <name>loggedPortToCorrespondentBlockIdAndOutputPortIndex</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::loggedPortToCorrespondentBlockIdAndOutputPortIndex</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="70" column="28" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1a319109eec1056fa13e15d2c11fda5865" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">PySysLinkBase::ISimulationBlock</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;PySysLinkBase::ISimulationBlock&gt; &gt; PySysLinkBase::SimulationManager::orderedBlocks</definition>
+        <argsstring></argsstring>
+        <name>orderedBlocks</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::orderedBlocks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="72" column="21" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationManager_1ab6213dda66676547c8678384e31c4b80" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ISimulationBlock&gt; &gt; PySysLinkBase::SimulationManager::simulationBlocksForceOutputUpdate</definition>
+        <argsstring></argsstring>
+        <name>simulationBlocksForceOutputUpdate</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::simulationBlocksForceOutputUpdate</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="78" column="21" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1af1ee8f89be5d6262807c689988277cc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::SimulationManager::SimulationManager</definition>
+        <argsstring>(std::shared_ptr&lt; SimulationModel &gt; simulationModel, std::shared_ptr&lt; SimulationOptions &gt; simulationOptions)</argsstring>
+        <name>SimulationManager</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::SimulationManager</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+          <declname>simulationModel</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationOptions" kindref="compound">SimulationOptions</ref> &gt;</type>
+          <declname>simulationOptions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="20" column="9" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="16" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a20a653eab89cf45830ba3451f72afcc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="structPySysLinkBase_1_1SimulationOutput" kindref="compound">SimulationOutput</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SimulationOutput &gt; PySysLinkBase::SimulationManager::RunSimulation</definition>
+        <argsstring>()</argsstring>
+        <name>RunSimulation</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::RunSimulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="21" column="25" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="411" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a2028f418a681a3b050356e4bd54b0466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PySysLinkBase::SimulationManager::RunSimulationStep</definition>
+        <argsstring>()</argsstring>
+        <name>RunSimulationStep</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::RunSimulationStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="23" column="16" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="373" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a50530b10bd7568bf1c3f6c9de79ddd84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="structPySysLinkBase_1_1SimulationOutput" kindref="compound">SimulationOutput</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SimulationOutput &gt; PySysLinkBase::SimulationManager::GetSimulationOutput</definition>
+        <argsstring>()</argsstring>
+        <name>GetSimulationOutput</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::GetSimulationOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="24" column="25" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="406" bodyend="409"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a996c2e4c7f818a5db4fb7f64b3ed862f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::ClassifyBlocks</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; PySysLinkBase::ISimulationBlock &gt; &gt; orderedBlocks, std::map&lt; std::shared_ptr&lt; SampleTime &gt;, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &gt; &amp;blocksForEachDiscreteSampleTime, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &amp;blocksWithConstantSampleTime, std::map&lt; std::shared_ptr&lt; SampleTime &gt;, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &gt; &amp;blocksForEachContinuousSampleTimeGroup)</argsstring>
+        <name>ClassifyBlocks</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::ClassifyBlocks</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">PySysLinkBase::ISimulationBlock</ref> &gt; &gt;</type>
+          <declname>orderedBlocks</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt; &amp;</type>
+          <declname>blocksForEachDiscreteSampleTime</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &amp;</type>
+          <declname>blocksWithConstantSampleTime</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt; &amp;</type>
+          <declname>blocksForEachContinuousSampleTimeGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="32" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="223" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a0287df0b6974b1fa325897b7365de4e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::ProcessBlock</definition>
+        <argsstring>(std::shared_ptr&lt; SimulationModel &gt; simulationModel, std::shared_ptr&lt; ISimulationBlock &gt; block, std::shared_ptr&lt; SampleTime &gt; sampleTime, double currentTime, bool isMinorStep=false)</argsstring>
+        <name>ProcessBlock</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::ProcessBlock</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+          <declname>simulationModel</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt;</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMinorStep</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="37" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="686" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a53346f3a9efb74a6147fb32d25ece633" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::GetTimeHitsToSampleTimes</definition>
+        <argsstring>(std::shared_ptr&lt; SimulationOptions &gt; simulationOptions, std::map&lt; std::shared_ptr&lt; SampleTime &gt;, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &gt; blocksForEachDiscreteSampleTime)</argsstring>
+        <name>GetTimeHitsToSampleTimes</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::GetTimeHitsToSampleTimes</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationOptions" kindref="compound">SimulationOptions</ref> &gt;</type>
+          <declname>simulationOptions</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt;</type>
+          <declname>blocksForEachDiscreteSampleTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="39" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="344" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a34c0fe04d98b7d452883244d79718737" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; double, int, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt; &gt;</type>
+        <definition>std::tuple&lt; double, int, std::vector&lt; std::shared_ptr&lt; SampleTime &gt; &gt; &gt; PySysLinkBase::SimulationManager::GetNearestTimeHit</definition>
+        <argsstring>(int nextDiscreteTimeHitToProcessIndex)</argsstring>
+        <name>GetNearestTimeHit</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::GetNearestTimeHit</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nextDiscreteTimeHitToProcessIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="41" column="20" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="635" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a116f1d5a9d9a3c53bc5008353b9eec8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; double, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt; &gt;</type>
+        <definition>std::tuple&lt; double, std::vector&lt; std::shared_ptr&lt; SampleTime &gt; &gt; &gt; PySysLinkBase::SimulationManager::GetNearestTimeHit</definition>
+        <argsstring>(double currentTime)</argsstring>
+        <name>GetNearestTimeHit</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::GetNearestTimeHit</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="42" column="20" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="584" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1abf65ed856b7110f49db2b3f622901205" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::SimulationManager::IsBlockInSampleTimes</definition>
+        <argsstring>(const std::shared_ptr&lt; ISimulationBlock &gt; &amp;block, const std::vector&lt; std::shared_ptr&lt; SampleTime &gt; &gt; &amp;sampleTimes, const std::map&lt; std::shared_ptr&lt; SampleTime &gt;, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &gt; &amp;blockMap)</argsstring>
+        <name>IsBlockInSampleTimes</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::IsBlockInSampleTimes</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &amp;</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt; &amp;</type>
+          <declname>sampleTimes</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;, std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt; &gt; &amp;</type>
+          <declname>blockMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="51" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="566" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a4bd029a0cc3d67a1f75deb80192cd025" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::ValueUpdateBlockEventCallback</definition>
+        <argsstring>(const std::shared_ptr&lt; ValueUpdateBlockEvent &gt; blockEvent)</argsstring>
+        <name>ValueUpdateBlockEventCallback</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::ValueUpdateBlockEventCallback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ValueUpdateBlockEvent" kindref="compound">ValueUpdateBlockEvent</ref> &gt;</type>
+          <declname>blockEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="63" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="178" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a47eb93f242c448da5f6a573fea5dc635" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::LogSignalInputReadCallback</definition>
+        <argsstring>(const std::string blockId, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt; inputPorts, int inputPortIndex, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double currentTime)</argsstring>
+        <name>LogSignalInputReadCallback</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::LogSignalInputReadCallback</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>blockId</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1InputPort" kindref="compound">PySysLinkBase::InputPort</ref> &gt; &gt;</type>
+          <declname>inputPorts</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inputPortIndex</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">PySysLinkBase::SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="65" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="148" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1ae4f6db18ffa172ddc9f9019968e7ae11" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::LogSignalOutputUpdateCallback</definition>
+        <argsstring>(const std::string blockId, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt; outputPorts, int outputPortIndex, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double currentTime)</argsstring>
+        <name>LogSignalOutputUpdateCallback</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::LogSignalOutputUpdateCallback</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>blockId</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1OutputPort" kindref="compound">PySysLinkBase::OutputPort</ref> &gt; &gt;</type>
+          <declname>outputPorts</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outputPortIndex</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">PySysLinkBase::SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="66" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="119" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a1d63d1f198b01c5aa280538e7b143333" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::UpdateConfigurationValueCallback</definition>
+        <argsstring>(const std::string blockId, const std::string keyName, ConfigurationValue value)</argsstring>
+        <name>UpdateConfigurationValueCallback</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::UpdateConfigurationValueCallback</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>blockId</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>keyName</declname>
+        </param>
+        <param>
+          <type>ConfigurationValue</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="67" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="216" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1adaebd5327b47405bf67b9fd417109cbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::ProcessBlocksInSampleTimes</definition>
+        <argsstring>(const std::vector&lt; std::shared_ptr&lt; SampleTime &gt; &gt; sampleTimes, bool isMinorStep=false)</argsstring>
+        <name>ProcessBlocksInSampleTimes</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::ProcessBlocksInSampleTimes</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt;</type>
+          <declname>sampleTimes</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMinorStep</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="74" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="534" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1a30af8fc5cf14f671fd31aeaea4388666" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::MakeFirstSimulationStep</definition>
+        <argsstring>()</argsstring>
+        <name>MakeFirstSimulationStep</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::MakeFirstSimulationStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="75" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="460" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationManager_1abd8e62d63de16def8e6eca4a67a954fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::SimulationManager::ProcessTimeHit</definition>
+        <argsstring>(double time, const std::vector&lt; std::shared_ptr&lt; SampleTime &gt; &gt; &amp;sampleTimesToProcess)</argsstring>
+        <name>ProcessTimeHit</name>
+        <qualifiedname>PySysLinkBase::SimulationManager::ProcessTimeHit</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt; &gt; &amp;</type>
+          <declname>sampleTimesToProcess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationManager.h" line="76" column="14" bodyfile="PySysLinkBase/src/SimulationManager.cpp" bodystart="478" bodyend="532"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/SimulationManager.h" line="17" column="5" bodyfile="PySysLinkBase/src/SimulationManager.h" bodystart="18" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a244ee7c66f421940ed519bd7a26c6863" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>blocksForEachContinuousSampleTimeGroup</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1af212f18b126d91d816e23576a8c2f5e2" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>blocksForEachDiscreteSampleTime</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a03d3dba3e7bb1428ff96f146da176943" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>blocksWithConstantSampleTime</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a996c2e4c7f818a5db4fb7f64b3ed862f" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>ClassifyBlocks</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a149ae1e140572ca4def6937a9ed7f76d" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>currentTime</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a34c0fe04d98b7d452883244d79718737" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>GetNearestTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a116f1d5a9d9a3c53bc5008353b9eec8d" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>GetNearestTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a50530b10bd7568bf1c3f6c9de79ddd84" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>GetSimulationOutput</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a53346f3a9efb74a6147fb32d25ece633" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>GetTimeHitsToSampleTimes</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1aec7fff12324988d551cda9570f216fb5" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>hasRunFullSimulation</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1abf65ed856b7110f49db2b3f622901205" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>IsBlockInSampleTimes</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1ac6325742335e145a5ae99f594df67a25" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>isFirstStepDone</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1aa2a39f9f45cd528f0d58898b682a4df9" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>isRunningStepByStep</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a3daf7beb88090250b187d5719021ba14" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>loggedPortToCorrespondentBlockIdAndOutputPortIndex</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a47eb93f242c448da5f6a573fea5dc635" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>LogSignalInputReadCallback</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1ae4f6db18ffa172ddc9f9019968e7ae11" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>LogSignalOutputUpdateCallback</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a30af8fc5cf14f671fd31aeaea4388666" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>MakeFirstSimulationStep</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a679a0a3b9344ad37284b3889348f3b48" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>nextSampleTimesToProcess</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a8db806e68e6f35756dce87650ea3b201" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>odeSolversForEachContinuousSampleTimeGroup</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a319109eec1056fa13e15d2c11fda5865" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>orderedBlocks</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1af97db503406be6be89e52a314e0fed0a" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>portToLogInToAvoidRepetition</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a0287df0b6974b1fa325897b7365de4e7" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>ProcessBlock</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1adaebd5327b47405bf67b9fd417109cbc" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>ProcessBlocksInSampleTimes</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1abd8e62d63de16def8e6eca4a67a954fe" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>ProcessTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a20a653eab89cf45830ba3451f72afcc6" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>RunSimulation</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a2028f418a681a3b050356e4bd54b0466" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>RunSimulationStep</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1ab6213dda66676547c8678384e31c4b80" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>simulationBlocksForceOutputUpdate</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1af1ee8f89be5d6262807c689988277cc9" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>SimulationManager</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1ab54022529ac6d2f316aeeb1ddde7f41d" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>simulationModel</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1adfb7c373775aa3164d850286fa5746f1" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>simulationOptions</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1adc1c5f0f79cc4bfbd2ab72b05be83ac2" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>simulationOutput</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1ab9dabbe8d7f62448d63f996f4afa34d6" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>timeHits</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a824a1b0fc6386404ebaeec270fa68753" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>timeHitsToSampleTimes</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a1d63d1f198b01c5aa280538e7b143333" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>UpdateConfigurationValueCallback</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationManager_1a4bd029a0cc3d67a1f75deb80192cd025" prot="private" virt="non-virtual"><scope>PySysLinkBase::SimulationManager</scope><name>ValueUpdateBlockEventCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_f369f56d7b697a340af10acf8c16dd1b" kind="dir">
+    <compoundname>PySysLinkBase</compoundname>
+    <innerdir refid="dir_24349d02627cc73e3bd6924fdf1282ac">PySysLinkBase/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/"/>
+  </compounddef>
+</doxygen>

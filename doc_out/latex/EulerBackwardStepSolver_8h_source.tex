@@ -1,0 +1,51 @@
+\doxysection{Euler\+Backward\+Step\+Solver.\+h}
+\hypertarget{EulerBackwardStepSolver_8h_source}{}\label{EulerBackwardStepSolver_8h_source}\index{PySysLinkBase/src/ContinuousAndOde/EulerBackwardStepSolver.h@{PySysLinkBase/src/ContinuousAndOde/EulerBackwardStepSolver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_EULER\_BACKWARD\_STEP\_SOLVER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_EULER\_BACKWARD\_STEP\_SOLVER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}IOdeStepSolver.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1EulerBackwardStepSolver}{EulerBackwardStepSolver}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{IOdeStepSolver}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPySysLinkBase_1_1EulerBackwardStepSolver}{EulerBackwardStepSolver}}(\textcolor{keywordtype}{double}\ maximumIterations\ =\ 50,\ \textcolor{keywordtype}{double}\ tolerance\ =\ 1e-\/6)\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ maximumIterations(maximumIterations),\ tolerance(tolerance)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::tuple<bool,\ std::vector<double>,\ \textcolor{keywordtype}{double}>\ SolveStep(std::function<std::vector<double>(std::vector<double>,\ \textcolor{keywordtype}{double})>\ system,\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>\ states\_0,\ \textcolor{keywordtype}{double}\ currentTime,\ \textcolor{keywordtype}{double}\ timeStep)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Jacobian\ needed\ for\ implicit\ Euler\ method"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::tuple<bool,\ std::vector<double>,\ \textcolor{keywordtype}{double}>\ SolveStep(std::function<std::vector<double>(std::vector<double>,\ \textcolor{keywordtype}{double})>\ systemDerivatives,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::function<std::vector<std::vector<double>>(std::vector<double>,\ \textcolor{keywordtype}{double})>\ systemJacobian,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>\ states\_0,\ \textcolor{keywordtype}{double}\ currentTime,\ \textcolor{keywordtype}{double}\ timeStep);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsJacobianNeeded()\textcolor{keyword}{\ const\ }}
+\DoxyCodeLine{00032\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ maximumIterations;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ tolerance;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>\ ComputeNewtonStep(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ systemJacobianEnd,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ systemDerivativesEnd,\ \textcolor{keyword}{const}\ std::vector<double>\&\ states\_0,\ \textcolor{keyword}{const}\ std::vector<double>\&\ statesEnd,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timeStep);}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_EULER\_FORWARD\_STEP\_SOLVER\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

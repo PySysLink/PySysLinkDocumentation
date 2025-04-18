@@ -1,0 +1,30 @@
+\doxysection{IBlock\+Events\+Handler.\+h}
+\hypertarget{IBlockEventsHandler_8h_source}{}\label{IBlockEventsHandler_8h_source}\index{PySysLinkBase/src/IBlockEventsHandler.h@{PySysLinkBase/src/IBlockEventsHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_IBLOCK\_EVENTS\_HANDLER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_IBLOCK\_EVENTS\_HANDLER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BlockEvents/BlockEvent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BlockEvents/ValueUpdateBlockEvent.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1IBlockEventsHandler}{IBlockEventsHandler}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPySysLinkBase_1_1IBlockEventsHandler}{\string~IBlockEventsHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BlockEventCallback(\textcolor{keyword}{const}\ std::shared\_ptr<BlockEvent>\ blockEvent)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RegisterValueUpdateBlockEventCallback(std::function<\textcolor{keywordtype}{void}\ (std::shared\_ptr<ValueUpdateBlockEvent>)>\ callback)\ =\ 0;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_IBLOCK\_EVENTS\_HANDLER\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

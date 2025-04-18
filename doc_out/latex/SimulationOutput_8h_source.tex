@@ -1,0 +1,69 @@
+\doxysection{Simulation\+Output.\+h}
+\hypertarget{SimulationOutput_8h_source}{}\label{SimulationOutput_8h_source}\index{PySysLinkBase/src/SimulationOutput.h@{PySysLinkBase/src/SimulationOutput.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_SIMULATION\_OUTPUT}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_SIMULATION\_OUTPUT}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }Signal;\ \textcolor{comment}{//\ Forward\ declaration}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1UnknownTypeSignal}{UnknownTypeSignal}}}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ id;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<double>\ times;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string\ GetTypeId()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::unique\_ptr<Signal<T>>\ TryCastToTyped()}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPySysLinkBase_1_1Signal}{Signal<T>}}*\ typedPtr\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPySysLinkBase_1_1Signal}{Signal<T>}}*\textcolor{keyword}{>}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!typedPtr)\ \textcolor{keywordflow}{throw}\ std::bad\_cast();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Signal<T>>(*typedPtr);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TryInsertValue(\textcolor{keywordtype}{double}\ time,\ T\ value)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPySysLinkBase_1_1Signal}{Signal<T>}}*\ typedPtr\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classPySysLinkBase_1_1Signal}{Signal<T>}}*\textcolor{keyword}{>}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!typedPtr)\ \textcolor{keywordflow}{throw}\ std::bad\_cast();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ typedPtr-\/>times.push\_back(time);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ typedPtr-\/>values.push\_back(value);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1Signal}{Signal}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPySysLinkBase_1_1UnknownTypeSignal}{UnknownTypeSignal}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<T>\ values;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ GetTypeId()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::to\_string(\textcolor{keyword}{typeid}(T).hash\_code())\ +\ \textcolor{keyword}{typeid}(T).name();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPySysLinkBase_1_1SimulationOutput}{SimulationOutput}}}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::map<std::string,\ std::shared\_ptr<UnknownTypeSignal>>>\ signals;}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_SIMULATION\_OUTPUT\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

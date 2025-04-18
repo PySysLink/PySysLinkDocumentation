@@ -1,0 +1,73 @@
+\doxysection{Configuration\+Value.\+h}
+\hypertarget{ConfigurationValue_8h_source}{}\label{ConfigurationValue_8h_source}\index{PySysLinkBase/src/ConfigurationValue.h@{PySysLinkBase/src/ConfigurationValue.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_CONFIGURATION\_VALUE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_CONFIGURATION\_VALUE}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }PySysLinkBase}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{using\ }ConfigurationValuePrimitive\ \ =\ std::variant<}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ int,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ double,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ bool,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::complex<double>,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<int>,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<double>,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<bool>,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<std::complex<double>>,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<std::string>>;}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }ConfigurationValue\ =\ std::variant<}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ int,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ double,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ bool,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::complex<double>,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::string,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<int>,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<double>,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<bool>,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::vector<std::complex<double>>,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::vector<std::string>,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ConfigurationValuePrimitive,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<ConfigurationValuePrimitive>>;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPySysLinkBase_1_1ConfigurationValueManager}{ConfigurationValueManager}}}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ T\ TryGetConfigurationValue(std::string\ keyName,\ std::map<std::string,\ ConfigurationValue>\ configurationValues)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ConfigurationValue\ foundValue;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ configurationValues.find(keyName);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ configurationValues.end())\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Key\ name:\ "{}}\ +\ keyName\ +\ \textcolor{stringliteral}{"{}\ not\ found\ in\ configuration."{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ foundValue\ =\ it-\/>second;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::get<T>(foundValue);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (std::bad\_variant\_access\ \textcolor{keyword}{const}\&\ ex)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Configuration\ option\ of\ key:\ "{}}\ +\ keyName\ +\ \textcolor{stringliteral}{"{}\ was\ not\ of\ expected\ type:\ "{}}\ +\ ex.what());}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ \}\ \textcolor{comment}{//\ namespace\ PySysLinkBase}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_CONFIGURATION\_VALUE\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

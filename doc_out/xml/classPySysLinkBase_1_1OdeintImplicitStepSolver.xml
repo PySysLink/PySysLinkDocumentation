@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1OdeintImplicitStepSolver" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::OdeintImplicitStepSolver</compoundname>
+    <basecompoundref refid="classPySysLinkBase_1_1IOdeStepSolver" prot="public" virt="non-virtual">PySysLinkBase::IOdeStepSolver</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a110510d5943dad097e44a16ff265397d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>std::shared_ptr&lt;T&gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::controlledStepper</definition>
+        <argsstring></argsstring>
+        <name>controlledStepper</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::controlledStepper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="20" column="29" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a598ab6650a153b3dbf995b7649b4d50b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boost::numeric::ublas::vector&lt; double &gt;</type>
+        <definition>static boost::numeric::ublas::vector&lt; double &gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::stdToUblas</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;v)</argsstring>
+        <name>stdToUblas</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::stdToUblas</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="23" column="50" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1ac6a93ac35611a18469b3092806ac6668" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>static std::vector&lt; double &gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::ublasToStd</definition>
+        <argsstring>(const boost::numeric::ublas::vector&lt; double &gt; &amp;u)</argsstring>
+        <name>ublasToStd</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::ublasToStd</qualifiedname>
+        <param>
+          <type>const boost::numeric::ublas::vector&lt; double &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="32" column="32" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="32" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a221cf7c94a6e0ec386c608ac8402fd06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boost::numeric::ublas::matrix&lt; double &gt;</type>
+        <definition>boost::numeric::ublas::matrix&lt; double &gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::stdToUblasMatrix</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;mat)</argsstring>
+        <name>stdToUblasMatrix</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::stdToUblasMatrix</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="40" column="43" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="40" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a636e6a96743ca0a2b3f080198ee462f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::OdeintImplicitStepSolver</definition>
+        <argsstring>(std::shared_ptr&lt; T &gt; controlledStepper)</argsstring>
+        <name>OdeintImplicitStepSolver</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::OdeintImplicitStepSolver</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; T &gt;</type>
+          <declname>controlledStepper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="53" column="13" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a4e4e8ebafd7d64005dd5869cf89ad9d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::IsJacobianNeeded</definition>
+        <argsstring>() const</argsstring>
+        <name>IsJacobianNeeded</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::IsJacobianNeeded</qualifiedname>
+        <reimplements refid="classPySysLinkBase_1_1IOdeStepSolver_1a44ecb6b46a609e384e001995554edda3">IsJacobianNeeded</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="58" column="26" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a08b8b611f0f41d16ce8cc0462b62a576" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt;</type>
+        <definition>virtual std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::SolveStep</definition>
+        <argsstring>(std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt; system, std::vector&lt; double &gt; states_0, double currentTime, double timeStep)</argsstring>
+        <name>SolveStep</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::SolveStep</qualifiedname>
+        <reimplements refid="classPySysLinkBase_1_1IOdeStepSolver_1a659ebf9b823e7ebefe7ed67f9aff9976">SolveStep</reimplements>
+        <param>
+          <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="63" column="32" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a2411fa2f831cd4ff86768a7260916f1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt;</type>
+        <definition>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt; PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;::SolveStep</definition>
+        <argsstring>(std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt; system, std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt; systemJacobian, std::vector&lt; double &gt; states_0, double currentTime, double timeStep)</argsstring>
+        <name>SolveStep</name>
+        <qualifiedname>PySysLinkBase::OdeintImplicitStepSolver::SolveStep</qualifiedname>
+        <reimplements refid="classPySysLinkBase_1_1IOdeStepSolver_1ab34ac0ce6221a578eeeaa43020a7118b">SolveStep</reimplements>
+        <param>
+          <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>system</declname>
+        </param>
+        <param>
+          <type>std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>systemJacobian</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="72" column="24" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="72" bodyend="132"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PySysLinkBase::IOdeStepSolver</label>
+        <link refid="classPySysLinkBase_1_1IOdeStepSolver"/>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1OdeintImplicitStepSolver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>PySysLinkBase::IOdeStepSolver</label>
+        <link refid="classPySysLinkBase_1_1IOdeStepSolver"/>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::OdeintImplicitStepSolver&lt; T &gt;</label>
+        <link refid="classPySysLinkBase_1_1OdeintImplicitStepSolver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" line="17" column="5" bodyfile="PySysLinkBase/src/ContinuousAndOde/OdeintImplicitStepSolver.h" bodystart="18" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a110510d5943dad097e44a16ff265397d" prot="private" virt="non-virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>controlledStepper</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a4e4e8ebafd7d64005dd5869cf89ad9d7" prot="public" virt="virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>IsJacobianNeeded</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a636e6a96743ca0a2b3f080198ee462f3" prot="public" virt="non-virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>OdeintImplicitStepSolver</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a08b8b611f0f41d16ce8cc0462b62a576" prot="public" virt="virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>SolveStep</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a2411fa2f831cd4ff86768a7260916f1a" prot="public" virt="virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>SolveStep</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a598ab6650a153b3dbf995b7649b4d50b" prot="private" virt="non-virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>stdToUblas</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1a221cf7c94a6e0ec386c608ac8402fd06" prot="private" virt="non-virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>stdToUblasMatrix</name></member>
+      <member refid="classPySysLinkBase_1_1OdeintImplicitStepSolver_1ac6a93ac35611a18469b3092806ac6668" prot="private" virt="non-virtual"><scope>PySysLinkBase::OdeintImplicitStepSolver</scope><name>ublasToStd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

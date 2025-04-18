@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_py_sys_link_base_1_1_i_simulation_block" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PySysLinkBase::ISimulationBlock</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1ac214403d23d5fcd8d1b87cef9cd8b1c1" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; IBlockEventsHandler &gt;</type>
+        <definition>std::shared_ptr&lt;IBlockEventsHandler&gt; PySysLinkBase::ISimulationBlock::blockEventsHandler</definition>
+        <argsstring></argsstring>
+        <name>blockEventsHandler</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::blockEventsHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="20" column="25" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1adfb409d06ede18bf982b8bcf39e0a9a6" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PySysLinkBase::ISimulationBlock::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="22" column="21" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1a4f5775d2c06b6583f952f1d039e866e0" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PySysLinkBase::ISimulationBlock::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="23" column="21" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1af9b1fdee310f7da43160241d444a8714" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void (const std::string, const std::vector&lt;std::shared_ptr&lt;PySysLinkBase::InputPort&gt;&gt;, std::shared_ptr&lt;PySysLinkBase::SampleTime&gt;, double)&gt; &gt; PySysLinkBase::ISimulationBlock::readInputCallbacks</definition>
+        <argsstring></argsstring>
+        <name>readInputCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::readInputCallbacks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="25" column="21" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1ad6ff31ab3bc355d229d5148b4f0cd89b" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void (const std::string, const std::vector&lt;std::shared_ptr&lt;PySysLinkBase::OutputPort&gt;&gt;, std::shared_ptr&lt;PySysLinkBase::SampleTime&gt;, double)&gt; &gt; PySysLinkBase::ISimulationBlock::calculateOutputCallbacks</definition>
+        <argsstring></argsstring>
+        <name>calculateOutputCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::calculateOutputCallbacks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="26" column="21" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_sys_link_base_1_1_i_simulation_block_1abca2c30e5d6d5e35a6fbb47396054aee" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(const std::string, const std::string, const ConfigurationValue)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void (const std::string, const std::string, const ConfigurationValue)&gt; &gt; PySysLinkBase::ISimulationBlock::updateConfigurationValueCallbacks</definition>
+        <argsstring></argsstring>
+        <name>updateConfigurationValueCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::updateConfigurationValueCallbacks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="27" column="21" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a76bb52b4c88e2937c88ace8d5a06551b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string PySysLinkBase::ISimulationBlock::GetId</definition>
+        <argsstring>() const</argsstring>
+        <name>GetId</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="29" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a894eb9ffa4f2cd55f1619b8575de2f43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string PySysLinkBase::ISimulationBlock::GetName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetName</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="30" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a4ac80d5119701265114e7c165737c141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::ISimulationBlock::ISimulationBlock</definition>
+        <argsstring>(std::map&lt; std::string, ConfigurationValue &gt; blockConfiguration, std::shared_ptr&lt; IBlockEventsHandler &gt; blockEventsHandler)</argsstring>
+        <name>ISimulationBlock</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::ISimulationBlock</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, ConfigurationValue &gt;</type>
+          <declname>blockConfiguration</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; IBlockEventsHandler &gt;</type>
+          <declname>blockEventsHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="32" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a50990a1bc9aa1b2c89d5877e950516f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual PySysLinkBase::ISimulationBlock::~ISimulationBlock</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ISimulationBlock</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::~ISimulationBlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="33" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a5ca6f115f8f39b88944a73b85cdddee7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::shared_ptr&lt; SampleTime &gt;</type>
+        <definition>virtual const std::shared_ptr&lt; SampleTime &gt; PySysLinkBase::ISimulationBlock::GetSampleTime</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetSampleTime</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetSampleTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="35" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a07671c1e7ae3fd76f7e3617c04111e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void PySysLinkBase::ISimulationBlock::SetSampleTime</definition>
+        <argsstring>(std::shared_ptr&lt; SampleTime &gt; sampleTime)=0</argsstring>
+        <name>SetSampleTime</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::SetSampleTime</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; SampleTime &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="36" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a5a223517192e003faf2d4e44a3eaa8a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt;</type>
+        <definition>virtual std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt; PySysLinkBase::ISimulationBlock::GetInputPorts</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetInputPorts</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetInputPorts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="38" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1af94ff25f95df228fa94dd9614afccfa1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;</type>
+        <definition>virtual const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt; PySysLinkBase::ISimulationBlock::GetOutputPorts</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetOutputPorts</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetOutputPorts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="39" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a06ece6d3ef7d3e4fc142f68d1a7e8889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;</type>
+        <definition>const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt; PySysLinkBase::ISimulationBlock::ComputeOutputsOfBlock</definition>
+        <argsstring>(const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double currentTime, bool isMinorStep=false)</argsstring>
+        <name>ComputeOutputsOfBlock</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::ComputeOutputsOfBlock</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMinorStep</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="41" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a890b7de6acd9db4dcddc98fb96ba6d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;</type>
+        <definition>virtual const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt; PySysLinkBase::ISimulationBlock::_ComputeOutputsOfBlock</definition>
+        <argsstring>(const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double currentTime, bool isMinorStep=false)=0</argsstring>
+        <name>_ComputeOutputsOfBlock</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::_ComputeOutputsOfBlock</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMinorStep</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="42" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a1397c076cd865a0d99888dc7bd164608" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::ISimulationBlock::IsBlockFreeSource</definition>
+        <argsstring>() const</argsstring>
+        <name>IsBlockFreeSource</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::IsBlockFreeSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="44" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1afe5b5bd613a75776bb67da546408df3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::ISimulationBlock::IsInputDirectBlockChainEnd</definition>
+        <argsstring>(int inputIndex) const</argsstring>
+        <name>IsInputDirectBlockChainEnd</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::IsInputDirectBlockChainEnd</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>inputIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="45" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1afa934e50ae39ba1df69b5aee419bfeed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::ISimulationBlock::NotifyEvent</definition>
+        <argsstring>(std::shared_ptr&lt; PySysLinkBase::BlockEvent &gt; blockEvent) const</argsstring>
+        <name>NotifyEvent</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::NotifyEvent</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; PySysLinkBase::BlockEvent &gt;</type>
+          <declname>blockEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="47" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a77041ae6644dc57f18c585bf174f4ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::ISimulationBlock::TryUpdateConfigurationValue</definition>
+        <argsstring>(std::string keyName, ConfigurationValue value)</argsstring>
+        <name>TryUpdateConfigurationValue</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::TryUpdateConfigurationValue</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>keyName</declname>
+        </param>
+        <param>
+          <type>ConfigurationValue</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="48" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a68ad1377752024976e04b1bf46f22495" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool PySysLinkBase::ISimulationBlock::_TryUpdateConfigurationValue</definition>
+        <argsstring>(std::string keyName, ConfigurationValue value)=0</argsstring>
+        <name>_TryUpdateConfigurationValue</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::_TryUpdateConfigurationValue</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>keyName</declname>
+        </param>
+        <param>
+          <type>ConfigurationValue</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="49" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a77365ca2a2c7ffbcba1193744c63ce39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::ISimulationBlock::RegisterReadInputsCallbacks</definition>
+        <argsstring>(std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt; callback)</argsstring>
+        <name>RegisterReadInputsCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::RegisterReadInputsCallbacks</qualifiedname>
+        <param>
+          <type>std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::InputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="53" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a1da48994ae7c7db3fb8a6d2328ff1b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::ISimulationBlock::RegisterCalculateOutputCallbacks</definition>
+        <argsstring>(std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt; callback)</argsstring>
+        <name>RegisterCalculateOutputCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::RegisterCalculateOutputCallbacks</qualifiedname>
+        <param>
+          <type>std::function&lt; void(const std::string, const std::vector&lt; std::shared_ptr&lt; PySysLinkBase::OutputPort &gt; &gt;, std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;, double)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="54" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a11851751f9a5af5ea113fc0dfae1ad56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::ISimulationBlock::RegisterUpdateConfigurationValueCallbacks</definition>
+        <argsstring>(std::function&lt; void(const std::string, const std::string, const ConfigurationValue)&gt; callback)</argsstring>
+        <name>RegisterUpdateConfigurationValueCallbacks</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::RegisterUpdateConfigurationValueCallbacks</qualifiedname>
+        <param>
+          <type>std::function&lt; void(const std::string, const std::string, const ConfigurationValue)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="55" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a1931de4dad9e12594a79a2ed50435fd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>virtual const std::vector&lt; std::pair&lt; double, double &gt; &gt; PySysLinkBase::ISimulationBlock::GetEvents</definition>
+        <argsstring>(const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double eventTime, std::vector&lt; double &gt; eventTimeStates, bool includeKnownEvents=false) const</argsstring>
+        <name>GetEvents</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetEvents</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eventTime</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>eventTimeStates</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>includeKnownEvents</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="57" column="35" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1ae4e6d74783530d007f98b714ee943e6d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::vector&lt; double &gt;</type>
+        <definition>virtual const std::vector&lt; double &gt; PySysLinkBase::ISimulationBlock::GetKnownEvents</definition>
+        <argsstring>(const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; resolvedSampleTime, double simulationStartTime, double simulationEndTime) const</argsstring>
+        <name>GetKnownEvents</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::GetKnownEvents</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt;</type>
+          <declname>resolvedSampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>simulationStartTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>simulationEndTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="62" column="35" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="62" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_py_sys_link_base_1_1_i_simulation_block_1a176ed34403c18c8747d010115a4277a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_py_sys_link_base_1_1_i_simulation_block" kindref="compound">ISimulationBlock</ref> &gt;</type>
+        <definition>static std::shared_ptr&lt; ISimulationBlock &gt; PySysLinkBase::ISimulationBlock::FindBlockById</definition>
+        <argsstring>(std::string id, const std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; &amp;blocksToFind)</argsstring>
+        <name>FindBlockById</name>
+        <qualifiedname>PySysLinkBase::ISimulationBlock::FindBlockById</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="class_py_sys_link_base_1_1_i_simulation_block" kindref="compound">ISimulationBlock</ref> &gt; &gt; &amp;</type>
+          <declname>blocksToFind</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="51" column="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" line="18" column="5" bodyfile="/home/pello/docs-site/PySysLinkBase/src/ISimulationBlock.h" bodystart="18" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a890b7de6acd9db4dcddc98fb96ba6d47" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>_ComputeOutputsOfBlock</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a68ad1377752024976e04b1bf46f22495" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>_TryUpdateConfigurationValue</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1ac214403d23d5fcd8d1b87cef9cd8b1c1" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>blockEventsHandler</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1ad6ff31ab3bc355d229d5148b4f0cd89b" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>calculateOutputCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a06ece6d3ef7d3e4fc142f68d1a7e8889" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>ComputeOutputsOfBlock</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a176ed34403c18c8747d010115a4277a6" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>FindBlockById</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a1931de4dad9e12594a79a2ed50435fd2" prot="public" virt="virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetEvents</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a76bb52b4c88e2937c88ace8d5a06551b" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetId</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a5a223517192e003faf2d4e44a3eaa8a6" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetInputPorts</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1ae4e6d74783530d007f98b714ee943e6d" prot="public" virt="virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetKnownEvents</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a894eb9ffa4f2cd55f1619b8575de2f43" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetName</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1af94ff25f95df228fa94dd9614afccfa1" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetOutputPorts</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a5ca6f115f8f39b88944a73b85cdddee7" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>GetSampleTime</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a4f5775d2c06b6583f952f1d039e866e0" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>id</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a1397c076cd865a0d99888dc7bd164608" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>IsBlockFreeSource</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a4ac80d5119701265114e7c165737c141" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>ISimulationBlock</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1afe5b5bd613a75776bb67da546408df3f" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>IsInputDirectBlockChainEnd</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1adfb409d06ede18bf982b8bcf39e0a9a6" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>name</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1afa934e50ae39ba1df69b5aee419bfeed" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>NotifyEvent</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1af9b1fdee310f7da43160241d444a8714" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>readInputCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a1da48994ae7c7db3fb8a6d2328ff1b8a" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>RegisterCalculateOutputCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a77365ca2a2c7ffbcba1193744c63ce39" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>RegisterReadInputsCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a11851751f9a5af5ea113fc0dfae1ad56" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>RegisterUpdateConfigurationValueCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a07671c1e7ae3fd76f7e3617c04111e5d" prot="public" virt="pure-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>SetSampleTime</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a77041ae6644dc57f18c585bf174f4ced" prot="public" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>TryUpdateConfigurationValue</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1abca2c30e5d6d5e35a6fbb47396054aee" prot="protected" virt="non-virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>updateConfigurationValueCallbacks</name></member>
+      <member refid="class_py_sys_link_base_1_1_i_simulation_block_1a50990a1bc9aa1b2c89d5877e950516f0" prot="public" virt="virtual"><scope>PySysLinkBase::ISimulationBlock</scope><name>~ISimulationBlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

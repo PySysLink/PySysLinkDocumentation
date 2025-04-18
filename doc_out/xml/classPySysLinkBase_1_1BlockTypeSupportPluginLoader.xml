@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1BlockTypeSupportPluginLoader" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::BlockTypeSupportPluginLoader</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1a81b62ee9fe1f4e50a0144a7a88a3277f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IBlockFactory" kindref="compound">IBlockFactory</ref> &gt; &gt;</type>
+        <definition>std::map&lt; std::string, std::shared_ptr&lt; IBlockFactory &gt; &gt; PySysLinkBase::BlockTypeSupportPluginLoader::LoadPlugins</definition>
+        <argsstring>(const std::string &amp;pluginDirectory)</argsstring>
+        <name>LoadPlugins</name>
+        <qualifiedname>PySysLinkBase::BlockTypeSupportPluginLoader::LoadPlugins</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pluginDirectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockTypeSupportPluginLoader.h" line="15" column="14" bodyfile="PySysLinkBase/src/BlockTypeSupportPluginLoader.cpp" bodystart="7" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1a38b67bd2c59cc3b458e3f8dd3b333ecb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; PySysLinkBase::BlockTypeSupportPluginLoader::FindSharedLibraries</definition>
+        <argsstring>(const std::string &amp;pluginDirectory)</argsstring>
+        <name>FindSharedLibraries</name>
+        <qualifiedname>PySysLinkBase::BlockTypeSupportPluginLoader::FindSharedLibraries</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pluginDirectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockTypeSupportPluginLoader.h" line="18" column="17" bodyfile="PySysLinkBase/src/BlockTypeSupportPluginLoader.cpp" bodystart="54" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1aa2b60a64dcb9a222a180001851251afa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::BlockTypeSupportPluginLoader::StringEndsWith</definition>
+        <argsstring>(const std::string &amp;str, const std::string &amp;suffix)</argsstring>
+        <name>StringEndsWith</name>
+        <qualifiedname>PySysLinkBase::BlockTypeSupportPluginLoader::StringEndsWith</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>suffix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/BlockTypeSupportPluginLoader.h" line="19" column="10" bodyfile="PySysLinkBase/src/BlockTypeSupportPluginLoader.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/BlockTypeSupportPluginLoader.h" line="13" column="1" bodyfile="PySysLinkBase/src/BlockTypeSupportPluginLoader.h" bodystart="13" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1a38b67bd2c59cc3b458e3f8dd3b333ecb" prot="private" virt="non-virtual"><scope>PySysLinkBase::BlockTypeSupportPluginLoader</scope><name>FindSharedLibraries</name></member>
+      <member refid="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1a81b62ee9fe1f4e50a0144a7a88a3277f" prot="public" virt="non-virtual"><scope>PySysLinkBase::BlockTypeSupportPluginLoader</scope><name>LoadPlugins</name></member>
+      <member refid="classPySysLinkBase_1_1BlockTypeSupportPluginLoader_1aa2b60a64dcb9a222a180001851251afa" prot="private" virt="non-virtual"><scope>PySysLinkBase::BlockTypeSupportPluginLoader</scope><name>StringEndsWith</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

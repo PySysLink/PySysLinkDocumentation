@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1Port" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::Port</compoundname>
+    <derivedcompoundref refid="classPySysLinkBase_1_1InputPort" prot="public" virt="non-virtual">PySysLinkBase::InputPort</derivedcompoundref>
+    <derivedcompoundref refid="classPySysLinkBase_1_1OutputPort" prot="public" virt="non-virtual">PySysLinkBase::OutputPort</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1Port_1a56105baaf82a42cc0d59d5dc84c314fa" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" kindref="compound">UnknownTypeSignalValue</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;UnknownTypeSignalValue&gt; PySysLinkBase::Port::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>PySysLinkBase::Port::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="16" column="25" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1Port_1adc9ad549434f1a4d0e26d2670db90032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::Port::Port</definition>
+        <argsstring>(std::shared_ptr&lt; UnknownTypeSignalValue &gt; value)</argsstring>
+        <name>Port</name>
+        <qualifiedname>PySysLinkBase::Port::Port</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" kindref="compound">UnknownTypeSignalValue</ref> &gt;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="19" column="9" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1Port_1a8ff1fbd1881cec8e4b45d7f4f45abbfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::Port::TryCopyValueToPort</definition>
+        <argsstring>(Port &amp;otherPort) const</argsstring>
+        <name>TryCopyValueToPort</name>
+        <qualifiedname>PySysLinkBase::Port::TryCopyValueToPort</qualifiedname>
+        <param>
+          <type><ref refid="classPySysLinkBase_1_1Port" kindref="compound">Port</ref> &amp;</type>
+          <declname>otherPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="21" column="14" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.cpp" bodystart="14" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1Port_1a98a694dbe6fc7aed1e77a6af5938ddb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::Port::SetValue</definition>
+        <argsstring>(std::shared_ptr&lt; UnknownTypeSignalValue &gt; value)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>PySysLinkBase::Port::SetValue</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" kindref="compound">UnknownTypeSignalValue</ref> &gt;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="23" column="14" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1Port_1a825b4f016574a84e7377738533c61db6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1UnknownTypeSignalValue" kindref="compound">UnknownTypeSignalValue</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; UnknownTypeSignalValue &gt; PySysLinkBase::Port::GetValue</definition>
+        <argsstring>() const</argsstring>
+        <name>GetValue</name>
+        <qualifiedname>PySysLinkBase::Port::GetValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="24" column="25" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.cpp" bodystart="30" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1Port_1ac61841631f2d0e3a0498ead4a01fb502" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::Port::operator==</definition>
+        <argsstring>(const Port &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>PySysLinkBase::Port::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classPySysLinkBase_1_1Port" kindref="compound">Port</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="26" column="14" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.h" bodystart="26" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PySysLinkBase::InputPort</label>
+        <link refid="classPySysLinkBase_1_1InputPort"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PySysLinkBase::OutputPort</label>
+        <link refid="classPySysLinkBase_1_1OutputPort"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PySysLinkBase::Port</label>
+        <link refid="classPySysLinkBase_1_1Port"/>
+      </node>
+    </inheritancegraph>
+    <location file="PySysLinkBase/src/PortsAndSignalValues/Port.h" line="14" column="5" bodyfile="PySysLinkBase/src/PortsAndSignalValues/Port.h" bodystart="14" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1Port_1a825b4f016574a84e7377738533c61db6" prot="public" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>GetValue</name></member>
+      <member refid="classPySysLinkBase_1_1Port_1ac61841631f2d0e3a0498ead4a01fb502" prot="public" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>operator==</name></member>
+      <member refid="classPySysLinkBase_1_1Port_1adc9ad549434f1a4d0e26d2670db90032" prot="public" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>Port</name></member>
+      <member refid="classPySysLinkBase_1_1Port_1a98a694dbe6fc7aed1e77a6af5938ddb2" prot="public" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>SetValue</name></member>
+      <member refid="classPySysLinkBase_1_1Port_1a8ff1fbd1881cec8e4b45d7f4f45abbfd" prot="public" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>TryCopyValueToPort</name></member>
+      <member refid="classPySysLinkBase_1_1Port_1a56105baaf82a42cc0d59d5dc84c314fa" prot="protected" virt="non-virtual"><scope>PySysLinkBase::Port</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

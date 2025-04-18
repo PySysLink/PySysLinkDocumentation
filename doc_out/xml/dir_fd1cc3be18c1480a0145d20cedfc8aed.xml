@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fd1cc3be18c1480a0145d20cedfc8aed" kind="dir">
+    <compoundname>PySysLinkBase/src/PortsAndSignalValues</compoundname>
+    <innerfile refid="InputPort_8cpp">InputPort.cpp</innerfile>
+    <innerfile refid="InputPort_8h">InputPort.h</innerfile>
+    <innerfile refid="OutputPort_8cpp">OutputPort.cpp</innerfile>
+    <innerfile refid="OutputPort_8h">OutputPort.h</innerfile>
+    <innerfile refid="Port_8cpp">Port.cpp</innerfile>
+    <innerfile refid="Port_8h">Port.h</innerfile>
+    <innerfile refid="SignalValue_8h">SignalValue.h</innerfile>
+    <innerfile refid="UnknownTypeSignalValue_8h">UnknownTypeSignalValue.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/PortsAndSignalValues/"/>
+  </compounddef>
+</doxygen>

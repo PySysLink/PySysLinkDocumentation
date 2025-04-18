@@ -1,0 +1,148 @@
+
+.. _program_listing_file_PySysLinkBase_src_ISimulationBlock.cpp:
+
+Program Listing for File ISimulationBlock.cpp
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_PySysLinkBase_src_ISimulationBlock.cpp>` (``PySysLinkBase/src/ISimulationBlock.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "ISimulationBlock.h"
+   #include <algorithm>
+   
+   namespace PySysLinkBase
+   {
+       ISimulationBlock::ISimulationBlock(std::map<std::string, ConfigurationValue> blockConfiguration, std::shared_ptr<IBlockEventsHandler> blockEventsHandler)
+       {
+           this->name = ConfigurationValueManager::TryGetConfigurationValue<std::string>("Name", blockConfiguration);
+           this->id = ConfigurationValueManager::TryGetConfigurationValue<std::string>("Id", blockConfiguration);
+   
+           this->blockEventsHandler = blockEventsHandler;
+   
+           this->calculateOutputCallbacks = {};
+       }
+   
+       const std::string ISimulationBlock::GetId() const
+       {
+           return this->id;
+       }
+       const std::string ISimulationBlock::GetName() const
+       {
+           return this->name;
+       }
+   
+       std::shared_ptr<ISimulationBlock> ISimulationBlock::FindBlockById(std::string id, const std::vector<std::shared_ptr<ISimulationBlock>>& blocksToFind)
+       {
+           auto it = std::find_if(blocksToFind.begin(), blocksToFind.end(), [&id](const std::shared_ptr<ISimulationBlock>& block) {return block->GetId() == id;});
+   
+           if (it != blocksToFind.end())
+           {
+               int index = std::distance(blocksToFind.begin(), it);
+               return blocksToFind[index];
+           }
+           else
+           {
+               throw std::out_of_range("Block with id: " + id + " not found in provided set.");
+           }
+       }
+   
+       bool ISimulationBlock::IsBlockFreeSource() const
+       {
+           if (this->GetOutputPorts().size() == 0)
+           {
+               return false;
+           }
+           
+           std::vector<std::shared_ptr<InputPort>> inputPorts = this->GetInputPorts();
+           bool areAllInputsNotDirectFeedthrough = true;
+           for (int j = 0; j < inputPorts.size(); j++)
+           {
+               areAllInputsNotDirectFeedthrough &= !inputPorts[j]->HasDirectFeedthrough();
+           }
+           if (areAllInputsNotDirectFeedthrough)
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+       }
+   
+       bool ISimulationBlock::IsInputDirectBlockChainEnd(int inputIndex) const
+       {
+           if (this->GetOutputPorts().size() == 0 || !this->GetInputPorts()[inputIndex]->HasDirectFeedthrough())
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+       } 
+   
+       void ISimulationBlock::NotifyEvent(std::shared_ptr<PySysLinkBase::BlockEvent> blockEvent) const
+       {
+           this->blockEventsHandler->BlockEventCallback(blockEvent);
+       }
+   
+       const std::vector<std::shared_ptr<PySysLinkBase::OutputPort>> ISimulationBlock::ComputeOutputsOfBlock(const std::shared_ptr<PySysLinkBase::SampleTime> sampleTime, double currentTime, bool isMinorStep)
+       {
+           if (!isMinorStep)
+           {
+               for (const auto& callback : this->readInputCallbacks)
+               {
+                   callback(this->id, this->GetInputPorts(), sampleTime, currentTime);
+               }
+           }
+   
+           const std::vector<std::shared_ptr<PySysLinkBase::OutputPort>> outputPorts = this->_ComputeOutputsOfBlock(sampleTime, currentTime, isMinorStep);
+   
+           if (!isMinorStep)
+           {
+               for (const auto& callback : this->calculateOutputCallbacks)
+               {
+                   callback(this->id, outputPorts, sampleTime, currentTime);
+               }
+           }
+   
+           return outputPorts;
+       }
+   
+       void ISimulationBlock::RegisterReadInputsCallbacks(std::function<void (const std::string, const std::vector<std::shared_ptr<PySysLinkBase::InputPort>>, std::shared_ptr<PySysLinkBase::SampleTime>, double)> callback)
+       {
+           this->readInputCallbacks.push_back(callback);
+       }
+   
+       void ISimulationBlock::RegisterCalculateOutputCallbacks(std::function<void (const std::string, const std::vector<std::shared_ptr<PySysLinkBase::OutputPort>>, std::shared_ptr<PySysLinkBase::SampleTime>, double)> callback)
+       {
+           this->calculateOutputCallbacks.push_back(callback);
+       }
+       
+       void ISimulationBlock::RegisterUpdateConfigurationValueCallbacks(std::function<void (const std::string, const std::string, const ConfigurationValue)> callback)
+   
+       {
+           this->updateConfigurationValueCallbacks.push_back(callback);
+       }
+   
+       bool ISimulationBlock::TryUpdateConfigurationValue(std::string keyName, ConfigurationValue value)
+       {
+           bool keyChanged = this->_TryUpdateConfigurationValue(keyName, value);
+           if (keyChanged)
+           {
+               for (const auto& callback : this->updateConfigurationValueCallbacks)
+               {
+                   callback(this->id, keyName, value);
+               }
+           }
+           return keyChanged;
+       }
+   
+   
+   
+   
+   
+   } // namespace PySysLinkBase

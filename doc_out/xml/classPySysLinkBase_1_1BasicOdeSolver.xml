@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1BasicOdeSolver" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::BasicOdeSolver</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1ac5e431df5dce28ca706c0944a82ee584" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IOdeStepSolver" kindref="compound">IOdeStepSolver</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;IOdeStepSolver&gt; PySysLinkBase::BasicOdeSolver::odeStepSolver</definition>
+        <argsstring></argsstring>
+        <name>odeStepSolver</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::odeStepSolver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="17" column="29" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1af2ef961ebb1057b844892f868939d520" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SimulationModel&gt; PySysLinkBase::BasicOdeSolver::simulationModel</definition>
+        <argsstring></argsstring>
+        <name>simulationModel</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::simulationModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="18" column="29" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1ac7f729172cac1920d70d2be3e2dc42b2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ISimulationBlock&gt; &gt; PySysLinkBase::BasicOdeSolver::simulationBlocks</definition>
+        <argsstring></argsstring>
+        <name>simulationBlocks</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::simulationBlocks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="19" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a20232fee779d4b4dc184c290d6609688" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; PySysLinkBase::BasicOdeSolver::continuousStatesInEachBlock</definition>
+        <argsstring></argsstring>
+        <name>continuousStatesInEachBlock</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::continuousStatesInEachBlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="20" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1ade9ecd54600a8d9202b0b847b467383c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PySysLinkBase::BasicOdeSolver::totalStates</definition>
+        <argsstring></argsstring>
+        <name>totalStates</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::totalStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="21" column="17" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a394bd1471364b88498b4d6b1884ad19b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PySysLinkBase::BasicOdeSolver::knownTimeHits</definition>
+        <argsstring></argsstring>
+        <name>knownTimeHits</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::knownTimeHits</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="23" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a8f53e5b18232950d88c9b64b24af3ddd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PySysLinkBase::BasicOdeSolver::currentKnownTimeHit</definition>
+        <argsstring></argsstring>
+        <name>currentKnownTimeHit</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::currentKnownTimeHit</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="24" column="17" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a909474aa50906049264097c5767032c6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::nextUnknownTimeHit</definition>
+        <argsstring></argsstring>
+        <name>nextUnknownTimeHit</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::nextUnknownTimeHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="25" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1ab36081ed70d73911b2d514093961ace8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::nextSuggestedTimeStep</definition>
+        <argsstring></argsstring>
+        <name>nextSuggestedTimeStep</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::nextSuggestedTimeStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="26" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a55bced064a41e19cea70ba4c1e21e9cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; PySysLinkBase::BasicOdeSolver::nextTimeHitStates</definition>
+        <argsstring></argsstring>
+        <name>nextTimeHitStates</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::nextTimeHitStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="27" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a86377e3e50240aa30f8175ac1e9edebe" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SampleTime&gt; PySysLinkBase::BasicOdeSolver::sampleTime</definition>
+        <argsstring></argsstring>
+        <name>sampleTime</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::sampleTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="29" column="29" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a20f0c849267adb7799a254178944356c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::BasicOdeSolver::activateEvents</definition>
+        <argsstring></argsstring>
+        <name>activateEvents</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::activateEvents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="42" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1a44f9ecc95e7360ba441283a0d433f7e8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::eventTolerance</definition>
+        <argsstring></argsstring>
+        <name>eventTolerance</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::eventTolerance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="43" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1BasicOdeSolver_1aae81f3a45f37ffcbdcfc1467dbf61a07" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::firstTimeStep</definition>
+        <argsstring></argsstring>
+        <name>firstTimeStep</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::firstTimeStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="46" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1adc2ee4edf4cc3cacc2b4659e558489ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::ComputeBlockOutputs</definition>
+        <argsstring>(std::shared_ptr&lt; ISimulationBlock &gt; block, std::shared_ptr&lt; SampleTime &gt; sampleTime, double currentTime, bool isMinorStep=false)</argsstring>
+        <name>ComputeBlockOutputs</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::ComputeBlockOutputs</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt;</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMinorStep</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="31" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="195" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a598257d085e927b1ec1544f898e74186" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::ComputeMinorOutputs</definition>
+        <argsstring>(std::shared_ptr&lt; SampleTime &gt; sampleTime, double currentTime)</argsstring>
+        <name>ComputeMinorOutputs</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::ComputeMinorOutputs</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="32" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a756bdb2c90acfabfd1daff8629d7f1d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; PySysLinkBase::BasicOdeSolver::GetDerivatives</definition>
+        <argsstring>(std::shared_ptr&lt; SampleTime &gt; sampleTime, double currentTime)</argsstring>
+        <name>GetDerivatives</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetDerivatives</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="33" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="86" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1af200bcd1b331e6514d63a519a2ff858b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; PySysLinkBase::BasicOdeSolver::GetJacobian</definition>
+        <argsstring>(std::shared_ptr&lt; SampleTime &gt; sampleTime, double currentTime)</argsstring>
+        <name>GetJacobian</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetJacobian</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="34" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="113" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a3a886f19067ec11b8f38d0be53fb8313" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::SetStates</definition>
+        <argsstring>(std::vector&lt; double &gt; newStates)</argsstring>
+        <name>SetStates</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::SetStates</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>newStates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="35" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="173" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a8e4e81621e2543b52c9051e339036dc4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; PySysLinkBase::BasicOdeSolver::GetStates</definition>
+        <argsstring>()</argsstring>
+        <name>GetStates</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="36" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="61" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1aa8aec7a7632f98063b090763a63802a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt;</type>
+        <definition>std::tuple&lt; bool, std::vector&lt; double &gt;, double &gt; PySysLinkBase::BasicOdeSolver::OdeStepSolverStep</definition>
+        <argsstring>(std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt; systemLambda, std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt; systemJacobianLambda, std::vector&lt; double &gt; states_0, double currentTime, double timeStep)</argsstring>
+        <name>OdeStepSolverStep</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::OdeStepSolverStep</qualifiedname>
+        <param>
+          <type>std::function&lt; std::vector&lt; double &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>systemLambda</declname>
+        </param>
+        <param>
+          <type>std::function&lt; std::vector&lt; std::vector&lt; double &gt; &gt;(std::vector&lt; double &gt;, double)&gt;</type>
+          <declname>systemJacobianLambda</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="38" column="24" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="227" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1af28d681d29a198fe22db8cce8557f063" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>const std::vector&lt; std::pair&lt; double, double &gt; &gt; PySysLinkBase::BasicOdeSolver::GetEvents</definition>
+        <argsstring>(const std::shared_ptr&lt; PySysLinkBase::SampleTime &gt; sampleTime, double eventTime, std::vector&lt; double &gt; eventTimeStates) const</argsstring>
+        <name>GetEvents</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetEvents</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">PySysLinkBase::SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eventTime</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>eventTimeStates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="44" column="31" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="149" bodyend="171"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a46fa5da541b7a07812422d3121c84b53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; PySysLinkBase::BasicOdeSolver::SystemModel</definition>
+        <argsstring>(std::vector&lt; double &gt; states, double time)</argsstring>
+        <name>SystemModel</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::SystemModel</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="48" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="207" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1aa531871dc118044838ddbd96b093454e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; PySysLinkBase::BasicOdeSolver::SystemModelJacobian</definition>
+        <argsstring>(std::vector&lt; double &gt; states, double time)</argsstring>
+        <name>SystemModelJacobian</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::SystemModelJacobian</qualifiedname>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>states</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="49" column="25" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a2334a02bea568379edc88ff2d8c3dc07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::BasicOdeSolver::BasicOdeSolver</definition>
+        <argsstring>(std::shared_ptr&lt; IOdeStepSolver &gt; odeStepSolver, std::shared_ptr&lt; SimulationModel &gt; simulationModel, std::vector&lt; std::shared_ptr&lt; ISimulationBlock &gt; &gt; simulationBlocks, std::shared_ptr&lt; SampleTime &gt; sampleTime, std::shared_ptr&lt; SimulationOptions &gt; simulationOptions, double firstTimeStep=1e-6, bool activateEvents=true, double eventTolerance=1e-2)</argsstring>
+        <name>BasicOdeSolver</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::BasicOdeSolver</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1IOdeStepSolver" kindref="compound">IOdeStepSolver</ref> &gt;</type>
+          <declname>odeStepSolver</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationModel" kindref="compound">SimulationModel</ref> &gt;</type>
+          <declname>simulationModel</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1ISimulationBlock" kindref="compound">ISimulationBlock</ref> &gt; &gt;</type>
+          <declname>simulationBlocks</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SampleTime" kindref="compound">SampleTime</ref> &gt;</type>
+          <declname>sampleTime</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classPySysLinkBase_1_1SimulationOptions" kindref="compound">SimulationOptions</ref> &gt;</type>
+          <declname>simulationOptions</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>firstTimeStep</declname>
+          <defval>1e-6</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>activateEvents</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eventTolerance</declname>
+          <defval>1e-2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="51" column="13" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="8" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a4175075872a2abc516ea9fd874f49352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::UpdateStatesToNextTimeHits</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStatesToNextTimeHits</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::UpdateStatesToNextTimeHits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="56" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="219" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1ae2bd4d6671adb3b755eb4d893e0734a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::DoStep</definition>
+        <argsstring>(double currentTime, double timeStep)</argsstring>
+        <name>DoStep</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::DoStep</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="57" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="246" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1a0aa67c36e81e0e9bf9763b9d837fc931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PySysLinkBase::BasicOdeSolver::ComputeMajorOutputs</definition>
+        <argsstring>(double currentTime)</argsstring>
+        <name>ComputeMajorOutputs</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::ComputeMajorOutputs</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="58" column="18" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="53" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1af00d952568561e9fb37dee71fd1aa0f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::GetNextTimeHit</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNextTimeHit</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetNextTimeHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="60" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="355" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classPySysLinkBase_1_1BasicOdeSolver_1ac738220c9d56ef67205bc56972973e5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PySysLinkBase::BasicOdeSolver::GetNextSuggestedTimeStep</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNextSuggestedTimeStep</name>
+        <qualifiedname>PySysLinkBase::BasicOdeSolver::GetNextSuggestedTimeStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="61" column="20" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.cpp" bodystart="367" bodyend="370"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" line="14" column="5" bodyfile="PySysLinkBase/src/ContinuousAndOde/BasicOdeSolver.h" bodystart="15" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a20f0c849267adb7799a254178944356c" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>activateEvents</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a2334a02bea568379edc88ff2d8c3dc07" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>BasicOdeSolver</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1adc2ee4edf4cc3cacc2b4659e558489ae" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>ComputeBlockOutputs</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a0aa67c36e81e0e9bf9763b9d837fc931" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>ComputeMajorOutputs</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a598257d085e927b1ec1544f898e74186" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>ComputeMinorOutputs</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a20232fee779d4b4dc184c290d6609688" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>continuousStatesInEachBlock</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a8f53e5b18232950d88c9b64b24af3ddd" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>currentKnownTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ae2bd4d6671adb3b755eb4d893e0734a4" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>DoStep</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a44f9ecc95e7360ba441283a0d433f7e8" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>eventTolerance</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1aae81f3a45f37ffcbdcfc1467dbf61a07" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>firstTimeStep</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a756bdb2c90acfabfd1daff8629d7f1d7" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetDerivatives</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1af28d681d29a198fe22db8cce8557f063" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetEvents</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1af200bcd1b331e6514d63a519a2ff858b" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetJacobian</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ac738220c9d56ef67205bc56972973e5a" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetNextSuggestedTimeStep</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1af00d952568561e9fb37dee71fd1aa0f7" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetNextTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a8e4e81621e2543b52c9051e339036dc4" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>GetStates</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a394bd1471364b88498b4d6b1884ad19b" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>knownTimeHits</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ab36081ed70d73911b2d514093961ace8" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>nextSuggestedTimeStep</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a55bced064a41e19cea70ba4c1e21e9cd" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>nextTimeHitStates</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a909474aa50906049264097c5767032c6" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>nextUnknownTimeHit</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ac5e431df5dce28ca706c0944a82ee584" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>odeStepSolver</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1aa8aec7a7632f98063b090763a63802a6" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>OdeStepSolverStep</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a86377e3e50240aa30f8175ac1e9edebe" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>sampleTime</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a3a886f19067ec11b8f38d0be53fb8313" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>SetStates</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ac7f729172cac1920d70d2be3e2dc42b2" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>simulationBlocks</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1af2ef961ebb1057b844892f868939d520" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>simulationModel</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a46fa5da541b7a07812422d3121c84b53" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>SystemModel</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1aa531871dc118044838ddbd96b093454e" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>SystemModelJacobian</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1ade9ecd54600a8d9202b0b847b467383c" prot="private" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>totalStates</name></member>
+      <member refid="classPySysLinkBase_1_1BasicOdeSolver_1a4175075872a2abc516ea9fd874f49352" prot="public" virt="non-virtual"><scope>PySysLinkBase::BasicOdeSolver</scope><name>UpdateStatesToNextTimeHits</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

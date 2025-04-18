@@ -1,0 +1,75 @@
+\doxysection{Py\+Sys\+Link\+Base\+::Odeint\+Implicit\+Step\+Solver\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classPySysLinkBase_1_1OdeintImplicitStepSolver}{}\label{classPySysLinkBase_1_1OdeintImplicitStepSolver}\index{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}}
+
+
+Inheritance diagram for Py\+Sys\+Link\+Base\+::Odeint\+Implicit\+Step\+Solver\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classPySysLinkBase_1_1OdeintImplicitStepSolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Py\+Sys\+Link\+Base\+::Odeint\+Implicit\+Step\+Solver\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classPySysLinkBase_1_1OdeintImplicitStepSolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPySysLinkBase_1_1OdeintImplicitStepSolver_a636e6a96743ca0a2b3f080198ee462f3}\label{classPySysLinkBase_1_1OdeintImplicitStepSolver_a636e6a96743ca0a2b3f080198ee462f3} 
+{\bfseries Odeint\+Implicit\+Step\+Solver} (std\+::shared\+\_\+ptr$<$ T $>$ controlled\+Stepper)
+\item 
+virtual bool \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver_a4e4e8ebafd7d64005dd5869cf89ad9d7}{Is\+Jacobian\+Needed}} () const
+\item 
+virtual std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver_a08b8b611f0f41d16ce8cc0462b62a576}{Solve\+Step}} (std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$ system, std\+::vector$<$ double $>$ states\+\_\+0, double current\+Time, double time\+Step)
+\item 
+std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver_a2411fa2f831cd4ff86768a7260916f1a}{Solve\+Step}} (std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$ system, std\+::function$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$(std\+::vector$<$ double $>$, double)$>$ system\+Jacobian, std\+::vector$<$ double $>$ states\+\_\+0, double current\+Time, double time\+Step)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPySysLinkBase_1_1OdeintImplicitStepSolver_a4e4e8ebafd7d64005dd5869cf89ad9d7}\label{classPySysLinkBase_1_1OdeintImplicitStepSolver_a4e4e8ebafd7d64005dd5869cf89ad9d7} 
+\index{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}!IsJacobianNeeded@{IsJacobianNeeded}}
+\index{IsJacobianNeeded@{IsJacobianNeeded}!PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsJacobianNeeded()}{IsJacobianNeeded()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver}{Py\+Sys\+Link\+Base\+::\+Odeint\+Implicit\+Step\+Solver}}$<$ T $>$\+::\+Is\+Jacobian\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+\Hypertarget{classPySysLinkBase_1_1OdeintImplicitStepSolver_a2411fa2f831cd4ff86768a7260916f1a}\label{classPySysLinkBase_1_1OdeintImplicitStepSolver_a2411fa2f831cd4ff86768a7260916f1a} 
+\index{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}!SolveStep@{SolveStep}}
+\index{SolveStep@{SolveStep}!PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SolveStep()}{SolveStep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver}{Py\+Sys\+Link\+Base\+::\+Odeint\+Implicit\+Step\+Solver}}$<$ T $>$\+::\+Solve\+Step (\begin{DoxyParamCaption}\item[{std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$}]{system,  }\item[{std\+::function$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$(std\+::vector$<$ double $>$, double)$>$}]{system\+Jacobian,  }\item[{std\+::vector$<$ double $>$}]{states\+\_\+0,  }\item[{double}]{current\+Time,  }\item[{double}]{time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+\Hypertarget{classPySysLinkBase_1_1OdeintImplicitStepSolver_a08b8b611f0f41d16ce8cc0462b62a576}\label{classPySysLinkBase_1_1OdeintImplicitStepSolver_a08b8b611f0f41d16ce8cc0462b62a576} 
+\index{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}!SolveStep@{SolveStep}}
+\index{SolveStep@{SolveStep}!PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$@{PySysLinkBase::OdeintImplicitStepSolver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SolveStep()}{SolveStep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual std\+::tuple$<$ bool, std\+::vector$<$ double $>$, double $>$ \mbox{\hyperlink{classPySysLinkBase_1_1OdeintImplicitStepSolver}{Py\+Sys\+Link\+Base\+::\+Odeint\+Implicit\+Step\+Solver}}$<$ T $>$\+::\+Solve\+Step (\begin{DoxyParamCaption}\item[{std\+::function$<$ std\+::vector$<$ double $>$(std\+::vector$<$ double $>$, double)$>$}]{system,  }\item[{std\+::vector$<$ double $>$}]{states\+\_\+0,  }\item[{double}]{current\+Time,  }\item[{double}]{time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPySysLinkBase_1_1IOdeStepSolver}{Py\+Sys\+Link\+Base\+::\+IOde\+Step\+Solver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Py\+Sys\+Link\+Base/src/\+Continuous\+And\+Ode/Odeint\+Implicit\+Step\+Solver.\+h\end{DoxyCompactItemize}

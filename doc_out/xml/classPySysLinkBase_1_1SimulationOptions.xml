@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPySysLinkBase_1_1SimulationOptions" kind="class" language="C++" prot="public">
+    <compoundname>PySysLinkBase::SimulationOptions</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1a1173345349bd18371390b8639244bccd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::SimulationOptions::startTime</definition>
+        <argsstring></argsstring>
+        <name>startTime</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::startTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="17" column="16" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1ab7d038dc323453c7b800afd13d524f56" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::SimulationOptions::stopTime</definition>
+        <argsstring></argsstring>
+        <name>stopTime</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::stopTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="18" column="16" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1a41613e8e1279b4a593c7e1853c375588" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PySysLinkBase::SimulationOptions::runInNaturalTime</definition>
+        <argsstring></argsstring>
+        <name>runInNaturalTime</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::runInNaturalTime</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="20" column="14" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1aa789817afbdb84ae0c986607a9bf4f60" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PySysLinkBase::SimulationOptions::naturalTimeSpeedMultiplier</definition>
+        <argsstring></argsstring>
+        <name>naturalTimeSpeedMultiplier</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::naturalTimeSpeedMultiplier</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="21" column="16" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1a8c7d5a2c6a00d091a0e18784294f1e6c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; std::string, std::string, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;std::string, std::string, int&gt; &gt; PySysLinkBase::SimulationOptions::blockIdsInputOrOutputAndIndexesToLog</definition>
+        <argsstring></argsstring>
+        <name>blockIdsInputOrOutputAndIndexesToLog</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::blockIdsInputOrOutputAndIndexesToLog</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="23" column="21" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPySysLinkBase_1_1SimulationOptions_1a8a9524188567b89745c363137e20a3fd" prot="public" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::map&lt; std::string, ConfigurationValue &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::map&lt;std::string, ConfigurationValue&gt; &gt; PySysLinkBase::SimulationOptions::solversConfiguration</definition>
+        <argsstring></argsstring>
+        <name>solversConfiguration</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::solversConfiguration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="25" column="18" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPySysLinkBase_1_1SimulationOptions_1a3bed45e10d0bb23610f37b85458c8a87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PySysLinkBase::SimulationOptions::SimulationOptions</definition>
+        <argsstring>()=default</argsstring>
+        <name>SimulationOptions</name>
+        <qualifiedname>PySysLinkBase::SimulationOptions::SimulationOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PySysLinkBase/src/SimulationOptions.h" line="15" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PySysLinkBase/src/SimulationOptions.h" line="12" column="5" bodyfile="PySysLinkBase/src/SimulationOptions.h" bodystart="13" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1a8c7d5a2c6a00d091a0e18784294f1e6c" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>blockIdsInputOrOutputAndIndexesToLog</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1aa789817afbdb84ae0c986607a9bf4f60" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>naturalTimeSpeedMultiplier</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1a41613e8e1279b4a593c7e1853c375588" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>runInNaturalTime</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1a3bed45e10d0bb23610f37b85458c8a87" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>SimulationOptions</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1a8a9524188567b89745c363137e20a3fd" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>solversConfiguration</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1a1173345349bd18371390b8639244bccd" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>startTime</name></member>
+      <member refid="classPySysLinkBase_1_1SimulationOptions_1ab7d038dc323453c7b800afd13d524f56" prot="public" virt="non-virtual"><scope>PySysLinkBase::SimulationOptions</scope><name>stopTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
