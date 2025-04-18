@@ -19,12 +19,6 @@ build:
 sphinx:
   configuration: source/conf.py
 
-commands:
-  # 1) Generate the Doxygen XML
-  - doxygen Doxyfile
-  # 2) Build the Sphinx site
-  - sphinx-build -b html docs/ _build/html
-
 formats:
   - pdf
 
