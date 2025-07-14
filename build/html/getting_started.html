@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PySysLink: Getting Started &mdash; PySysLink 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Library API" href="api/library_root.html" />
+    <link rel="prev" title="PySysLink documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PySysLink
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PySysLink: Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-quickstart-with-docker">Installation (Quickstart with Docker)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-execution">Example Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-glibcxx-compatibility-errors">Troubleshooting: GLIBCXX Compatibility Errors</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PySysLink</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PySysLink: Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pysyslink-getting-started">
+<h1>PySysLink: Getting Started<a class="headerlink" href="#pysyslink-getting-started" title="Link to this heading"></a></h1>
+<p>Welcome to the <strong>PySysLink</strong> documentation!</p>
+<p>This guide walks you through installing and running PySysLink with basic C++ block support.</p>
+<p>—</p>
+<section id="installation-quickstart-with-docker">
+<h2>Installation (Quickstart with Docker)<a class="headerlink" href="#installation-quickstart-with-docker" title="Link to this heading"></a></h2>
+<p>To test PySysLink inside a clean containerized environment, use Docker with Ubuntu 22.04:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>ubuntu:22.04<span class="w"> </span>/bin/bash
+</pre></div>
+</div>
+<p>Then run the following commands to install Python, PySysLink, and required block plugins:</p>
+<p><strong>1. Install base system packages and Python:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt<span class="w"> </span>update
+apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>wget<span class="w"> </span>git
+pip<span class="w"> </span>install<span class="w"> </span>pysyslink_base
+</pre></div>
+</div>
+<p><strong>2. Prepare plugin directory layout:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/usr/local/lib/
+mkdir<span class="w"> </span>-p<span class="w"> </span>pysyslink_plugins/block_type_supports/basic_cpp_support_0_1_0
+mkdir<span class="w"> </span>-p<span class="w"> </span>pysyslink_plugins/basic_blocks_basic_cpp_0_1_0
+</pre></div>
+</div>
+<p><strong>3. Download plugin artifacts:</strong></p>
+<p><strong>Basic C++ Block Type Support:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/usr/local/lib/pysyslink_plugins/block_type_supports/basic_cpp_support_0_1_0
+
+wget<span class="w"> </span>https://github.com/PySysLink/BlockTypeSupportsBasicCpp/releases/download/v0.1.0/basic_cpp_support.0_1_0.pslkbtsp.yaml
+wget<span class="w"> </span>https://github.com/PySysLink/BlockTypeSupportsBasicCpp/releases/download/v0.1.0/libBlockTypeSupportsBasicCppSupport-0.1.0.so
+wget<span class="w"> </span>https://github.com/PySysLink/BlockTypeSupportsBasicCpp/releases/download/v0.1.0/libBlockTypeSupportsBasicCppSupport-0.1.0.so.0.1.0
+</pre></div>
+</div>
+<p><strong>Basic C++ Block Library:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/usr/local/lib/pysyslink_plugins/basic_blocks_basic_cpp_0_1_0
+
+wget<span class="w"> </span>https://github.com/PySysLink/BlockLibrariesBasicBlocksBasicCpp/releases/download/v0.1.0/basic_blocks_basic_cpp.0_1_0.pslkp.yaml
+wget<span class="w"> </span>https://github.com/PySysLink/BlockLibrariesBasicBlocksBasicCpp/releases/download/v0.1.0/libBlockLibrariesBasicBlocksBasicCpp-0.1.0.so
+wget<span class="w"> </span>https://github.com/PySysLink/BlockLibrariesBasicBlocksBasicCpp/releases/download/v0.1.0/libBlockLibrariesBasicBlocksBasicCpp-0.1.0.so.0.1.0
+</pre></div>
+</div>
+<p>—</p>
+</section>
+<section id="example-execution">
+<h2>Example Execution<a class="headerlink" href="#example-execution" title="Link to this heading"></a></h2>
+<p>Clone the Python bindings and run the example script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/home
+
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PySysLink/PySysLinkBasePythonBindings.git
+<span class="nb">cd</span><span class="w"> </span>PySysLinkBasePythonBindings/examples/
+python3<span class="w"> </span>test_continuous.py
+</pre></div>
+</div>
+<p>—</p>
+</section>
+<section id="troubleshooting-glibcxx-compatibility-errors">
+<h2>Troubleshooting: GLIBCXX Compatibility Errors<a class="headerlink" href="#troubleshooting-glibcxx-compatibility-errors" title="Link to this heading"></a></h2>
+<p>If you encounter an error like:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++</span><span class="p">.</span><span class="n">so</span><span class="mf">.6</span><span class="o">:</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="err">`</span><span class="n">GLIBCXX_3</span><span class="mf">.4.32</span><span class="err">&#39;</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">found</span>
+</pre></div>
+</div>
+<p>This means the <cite>.so</cite> plugin was compiled with a newer GCC/libstdc++ than your system provides.</p>
+<p><strong>What Introduced `GLIBCXX_3.4.30` and `GLIBCXX_3.4.32`?</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GLIBCXX_3.4.30</span></code>: Introduced in <strong>GCC 12</strong> (April 2022)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GLIBCXX_3.4.32</span></code>: Introduced in <strong>GCC 13</strong> (April 2023)</p></li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol class="arabic">
+<li><p><strong>Upgrade libstdc++:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ubuntu-toolchain-r/test
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libstdc++6
+</pre></div>
+</div>
+</li>
+<li><p><strong>Use Ubuntu 22.04 or newer</strong>, where GCC 11 or 12 is the default.</p></li>
+<li><p><strong>Compile plugins with gcc-9 or gcc-10</strong> for better backward compatibility.</p></li>
+</ol>
+<p>—</p>
+<p><strong>Happy simulating!</strong> 🚀</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PySysLink documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/library_root.html" class="btn btn-neutral float-right" title="Library API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Pello Usabiaga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
