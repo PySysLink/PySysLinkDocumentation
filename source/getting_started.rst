@@ -105,4 +105,44 @@ This means the `.so` plugin was compiled with a newer GCC/libstdc++ than your sy
 
 ---
 
+Roadmap
+---------------------------------------------
+
+Improbe editor visuals:
+
+* Block rotation
+* Fix triangle blocks
+* Arrows on links
+* Proper port positioning
+* Multi-output links
+* Align grid
+* Copy paste
+
+High level systems:
+
+* Subsystems
+* Subsystem references
+
+Installation:
+
+* Installation utility, kind of a simple package manager for plugins
+
+PySysLinkBase:
+
+* Profile performance, improbe
+* FMI export (check version)
+
+BlockTypeSupports:
+
+* FMI support (check version)
+* Python blocks
+* Check best way to integrate hardware, sockets...
+
+Others:
+
+* Code generation from low level system
+
+
+---
+
 **Happy simulating!** 🚀
