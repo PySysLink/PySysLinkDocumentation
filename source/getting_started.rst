@@ -108,7 +108,7 @@ This means the `.so` plugin was compiled with a newer GCC/libstdc++ than your sy
 Roadmap
 ---------------------------------------------
 
-Improbe editor visuals:
+Improve editor visuals:
 
 * Block rotation
 * Fix triangle blocks
@@ -129,7 +129,7 @@ Installation:
 
 PySysLinkBase:
 
-* Profile performance, improbe
+* Profile performance, improve
 * FMI export (check version)
 
 BlockTypeSupports:

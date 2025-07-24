@@ -27,7 +27,7 @@ Program Listing for File UnknownTypeSignalValue.h
    
            public:
    
-   
+               virtual ~UnknownTypeSignalValue() = default;
                virtual const std::string GetTypeId() const = 0;
    
                template <typename T>

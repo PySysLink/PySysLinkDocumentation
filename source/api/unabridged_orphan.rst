@@ -100,6 +100,11 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_PySysLinkBase_src_FullySupportedSignalValue.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_PySysLinkBase_src_FullySupportedSignalValue.h.rst
 
 .. toctree::
@@ -141,6 +146,16 @@ Files
    :maxdepth: 5
 
    file_PySysLinkBase_src_ContinuousAndOde_ISimulationBlockWithContinuousStates.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_PySysLinkBase_src_main.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_PySysLinkBase_src_main_dummy.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -231,6 +246,11 @@ Files
    :maxdepth: 5
 
    file_PySysLinkBase_src_SimulationOptions.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_PySysLinkBase_src_SimulationOutput.cpp.rst
 
 .. toctree::
    :maxdepth: 5

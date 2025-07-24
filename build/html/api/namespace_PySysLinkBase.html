@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct SimulationOutput" href="structPySysLinkBase_1_1SimulationOutput.html" />
+    <link rel="next" title="Struct WriteTask" href="structPySysLinkBase_1_1WriteTask.html" />
     <link rel="prev" title="Library API" href="library_root.html" /> 
 </head>
 
@@ -45,10 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">PySysLink – Open Source Block-Based Simulation Framework</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">PySysLink: Getting Started</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
@@ -60,6 +65,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
 </ul>
 </li>
@@ -99,13 +105,14 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#classes" id="id2">Classes</a></p></li>
 <li><p><a class="reference internal" href="#enums" id="id3">Enums</a></p></li>
-<li><p><a class="reference internal" href="#typedefs" id="id4">Typedefs</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id5">Typedefs</a></p></li>
 </ul>
 </nav>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="structPySysLinkBase_1_1SimulationOutput.html#exhale-struct-structpysyslinkbase-1-1simulationoutput"><span class="std std-ref">Struct SimulationOutput</span></a></p></li>
+<li><p><a class="reference internal" href="structPySysLinkBase_1_1WriteTask.html#exhale-struct-structpysyslinkbase-1-1writetask"><span class="std std-ref">Struct WriteTask</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1BasicOdeSolver.html#exhale-class-classpysyslinkbase-1-1basicodesolver"><span class="std std-ref">Class BasicOdeSolver</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1BlockEvent.html#exhale-class-classpysyslinkbase-1-1blockevent"><span class="std std-ref">Class BlockEvent</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1BlockEventsHandler.html#exhale-class-classpysyslinkbase-1-1blockeventshandler"><span class="std std-ref">Class BlockEventsHandler</span></a></p></li>
@@ -131,8 +138,10 @@
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1SimulationManager.html#exhale-class-classpysyslinkbase-1-1simulationmanager"><span class="std std-ref">Class SimulationManager</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1SimulationModel.html#exhale-class-classpysyslinkbase-1-1simulationmodel"><span class="std std-ref">Class SimulationModel</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1SimulationOptions.html#exhale-class-classpysyslinkbase-1-1simulationoptions"><span class="std std-ref">Class SimulationOptions</span></a></p></li>
+<li><p><a class="reference internal" href="classPySysLinkBase_1_1SimulationOutput.html#exhale-class-classpysyslinkbase-1-1simulationoutput"><span class="std std-ref">Class SimulationOutput</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1SolverFactory.html#exhale-class-classpysyslinkbase-1-1solverfactory"><span class="std std-ref">Class SolverFactory</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1SpdlogManager.html#exhale-class-classpysyslinkbase-1-1spdlogmanager"><span class="std std-ref">Class SpdlogManager</span></a></p></li>
+<li><p><a class="reference internal" href="classPySysLinkBase_1_1TaskQueue.html#exhale-class-classpysyslinkbase-1-1taskqueue"><span class="std std-ref">Template Class TaskQueue</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1UnknownTypeSignal.html#exhale-class-classpysyslinkbase-1-1unknowntypesignal"><span class="std std-ref">Class UnknownTypeSignal</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1UnknownTypeSignalValue.html#exhale-class-classpysyslinkbase-1-1unknowntypesignalvalue"><span class="std std-ref">Class UnknownTypeSignalValue</span></a></p></li>
 <li><p><a class="reference internal" href="classPySysLinkBase_1_1ValueUpdateBlockEvent.html#exhale-class-classpysyslinkbase-1-1valueupdateblockevent"><span class="std std-ref">Class ValueUpdateBlockEvent</span></a></p></li>
@@ -145,12 +154,19 @@
 <li><p><a class="reference internal" href="enum_SampleTime_8h_1a37b07c002d234502a0a433a8063533d7.html#exhale-enum-sampletime-8h-1a37b07c002d234502a0a433a8063533d7"><span class="std std-ref">Enum SampleTimeType</span></a></p></li>
 </ul>
 </section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_FullySupportedSignalValue_8cpp_1a0620ff31a80632e422a7b34e696f901d.html#exhale-function-fullysupportedsignalvalue-8cpp-1a0620ff31a80632e422a7b34e696f901d"><span class="std std-ref">Function PySysLinkBase::ConvertToFullySupportedSignalValue</span></a></p></li>
+<li><p><a class="reference internal" href="function_SimulationOutput_8h_1a6e64c657de8915636d77fd73d96b52ef.html#exhale-function-simulationoutput-8h-1a6e64c657de8915636d77fd73d96b52ef"><span class="std std-ref">Function PySysLinkBase::escapeJson</span></a></p></li>
+</ul>
+</section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="typedef_ConfigurationValue_8h_1a283f92b24f18044778ccff4ee920625a.html#exhale-typedef-configurationvalue-8h-1a283f92b24f18044778ccff4ee920625a"><span class="std std-ref">Typedef PySysLinkBase::ConfigurationValue</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_ConfigurationValue_8h_1ac58c734677576f1fafeb90780e0868dd.html#exhale-typedef-configurationvalue-8h-1ac58c734677576f1fafeb90780e0868dd"><span class="std std-ref">Typedef PySysLinkBase::ConfigurationValuePrimitive</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_FullySupportedSignalValue_8h_1a717ef293f9aa9b88bc84fe6106fb6cd0.html#exhale-typedef-fullysupportedsignalvalue-8h-1a717ef293f9aa9b88bc84fe6106fb6cd0"><span class="std std-ref">Typedef PySysLinkBase::FullySupportedSignalValue</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_FullySupportedSignalValue_8h_1a9171452032661969df90db630edd0c2f.html#exhale-typedef-fullysupportedsignalvalue-8h-1a9171452032661969df90db630edd0c2f"><span class="std std-ref">Typedef PySysLinkBase::FullySupportedSignalValue</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -160,7 +176,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="library_root.html" class="btn btn-neutral float-left" title="Library API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="structPySysLinkBase_1_1SimulationOutput.html" class="btn btn-neutral float-right" title="Struct SimulationOutput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structPySysLinkBase_1_1WriteTask.html" class="btn btn-neutral float-right" title="Struct WriteTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -17,7 +17,7 @@ Classes
 -------
 
 
-- :ref:`exhale_struct_structPySysLinkBase_1_1SimulationOutput`
+- :ref:`exhale_struct_structPySysLinkBase_1_1WriteTask`
 
 - :ref:`exhale_class_classPySysLinkBase_1_1BasicOdeSolver`
 
@@ -69,9 +69,13 @@ Classes
 
 - :ref:`exhale_class_classPySysLinkBase_1_1SimulationOptions`
 
+- :ref:`exhale_class_classPySysLinkBase_1_1SimulationOutput`
+
 - :ref:`exhale_class_classPySysLinkBase_1_1SolverFactory`
 
 - :ref:`exhale_class_classPySysLinkBase_1_1SpdlogManager`
+
+- :ref:`exhale_class_classPySysLinkBase_1_1TaskQueue`
 
 - :ref:`exhale_class_classPySysLinkBase_1_1UnknownTypeSignal`
 
@@ -89,6 +93,15 @@ Enums
 - :ref:`exhale_enum_SampleTime_8h_1a37b07c002d234502a0a433a8063533d7`
 
 
+Functions
+---------
+
+
+- :ref:`exhale_function_FullySupportedSignalValue_8cpp_1a0620ff31a80632e422a7b34e696f901d`
+
+- :ref:`exhale_function_SimulationOutput_8h_1a6e64c657de8915636d77fd73d96b52ef`
+
+
 Typedefs
 --------
 
@@ -97,4 +110,4 @@ Typedefs
 
 - :ref:`exhale_typedef_ConfigurationValue_8h_1ac58c734677576f1fafeb90780e0868dd`
 
-- :ref:`exhale_typedef_FullySupportedSignalValue_8h_1a717ef293f9aa9b88bc84fe6106fb6cd0`
+- :ref:`exhale_typedef_FullySupportedSignalValue_8h_1a9171452032661969df90db630edd0c2f`

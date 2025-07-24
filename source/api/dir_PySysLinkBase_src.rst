@@ -28,11 +28,14 @@ Files
 - :ref:`file_PySysLinkBase_src_BlockTypeSupportPluginLoader.cpp`
 - :ref:`file_PySysLinkBase_src_BlockTypeSupportPluginLoader.h`
 - :ref:`file_PySysLinkBase_src_ConfigurationValue.h`
+- :ref:`file_PySysLinkBase_src_FullySupportedSignalValue.cpp`
 - :ref:`file_PySysLinkBase_src_FullySupportedSignalValue.h`
 - :ref:`file_PySysLinkBase_src_IBlockEventsHandler.h`
 - :ref:`file_PySysLinkBase_src_IBlockFactory.h`
 - :ref:`file_PySysLinkBase_src_ISimulationBlock.cpp`
 - :ref:`file_PySysLinkBase_src_ISimulationBlock.h`
+- :ref:`file_PySysLinkBase_src_main.cpp`
+- :ref:`file_PySysLinkBase_src_main_dummy.cpp`
 - :ref:`file_PySysLinkBase_src_ModelParser.cpp`
 - :ref:`file_PySysLinkBase_src_ModelParser.h`
 - :ref:`file_PySysLinkBase_src_PortLink.cpp`
@@ -44,6 +47,7 @@ Files
 - :ref:`file_PySysLinkBase_src_SimulationModel.cpp`
 - :ref:`file_PySysLinkBase_src_SimulationModel.h`
 - :ref:`file_PySysLinkBase_src_SimulationOptions.h`
+- :ref:`file_PySysLinkBase_src_SimulationOutput.cpp`
 - :ref:`file_PySysLinkBase_src_SimulationOutput.h`
 - :ref:`file_PySysLinkBase_src_SpdlogManager.cpp`
 - :ref:`file_PySysLinkBase_src_SpdlogManager.h`

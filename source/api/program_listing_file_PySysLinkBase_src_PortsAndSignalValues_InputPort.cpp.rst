@@ -11,7 +11,6 @@ Program Listing for File InputPort.cpp
 .. code-block:: cpp
 
    #include "InputPort.h"
-   #include "ISimulationBlock.h"
    
    namespace PySysLinkBase
    {

@@ -1,31 +1,26 @@
-.. PySysLink documentation master file, created by
-   sphinx-quickstart on Thu Apr 17 11:22:23 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. PySysLink documentation master file
 
-PySysLink documentation
+PySysLink Documentation
 =======================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+Welcome to the documentation for **PySysLink**, the open-source block-based simulation framework.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Introduction
+
+   introduction
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started:
+   :caption: Getting Started
 
    getting_started
-..    installation
-..    usage
-
+   # installation
+   # usage
 
 .. toctree::
    :maxdepth: 2
+   :caption: Reference
 
-   about
    api/library_root

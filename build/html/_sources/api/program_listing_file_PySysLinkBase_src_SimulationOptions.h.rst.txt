@@ -35,6 +35,11 @@ Program Listing for File SimulationOptions.h
            std::vector<std::tuple<std::string, std::string, int>> blockIdsInputOrOutputAndIndexesToLog = {};
    
            std::map<std::string, std::map<std::string, ConfigurationValue>> solversConfiguration;
+   
+           std::string hdf5FileName = "";
+           bool saveToFileContinuously = false;
+   
+           bool saveToVectors = true;
        };
    } // namespace PySysLinkBase
    

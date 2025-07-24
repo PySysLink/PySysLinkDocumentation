@@ -13,10 +13,11 @@ Program Listing for File BlockTypeSupportPluginLoader.cpp
    #include "BlockTypeSupportPluginLoader.h"
    #include <filesystem>
    #include "spdlog/spdlog.h"
+   #include <dlfcn.h>
    
    namespace PySysLinkBase
    {
-       std::map<std::string, std::shared_ptr<IBlockFactory>> BlockTypeSupportPluginLoader::LoadPlugins(const std::string& pluginDirectory) {
+       std::map<std::string, std::shared_ptr<IBlockFactory>> BlockTypeSupportPluginLoader::LoadPlugins(const std::string& pluginDirectory, std::map<std::string, PySysLinkBase::ConfigurationValue> pluginConfiguration) {
            std::map<std::string, std::shared_ptr<IBlockFactory>> factoryRegistry;
            
            for (const auto& pluginPath : this->FindSharedLibraries(pluginDirectory)) {
@@ -43,7 +44,7 @@ Program Listing for File BlockTypeSupportPluginLoader.cpp
                
                spdlog::get("default_pysyslink")->debug("registerFuncLogger called on plugin: {}", pluginPath);
    
-               auto registerFuncFactory = reinterpret_cast<void(*)(std::map<std::string, std::shared_ptr<IBlockFactory>>&)>(dlsym(handle, "RegisterBlockFactories"));
+               auto registerFuncFactory = reinterpret_cast<void(*)(std::map<std::string, std::shared_ptr<IBlockFactory>>&, std::map<std::string, PySysLinkBase::ConfigurationValue>)>(dlsym(handle, "RegisterBlockFactories"));
    
                if (!registerFuncFactory) {
                    spdlog::get("default_pysyslink")->error("Failed to find RegisterBlockFactories entry point in: ", pluginPath);
@@ -53,7 +54,7 @@ Program Listing for File BlockTypeSupportPluginLoader.cpp
    
                spdlog::get("default_pysyslink")->debug("registerFuncFactory opened on plugin: {}", pluginPath);
    
-               registerFuncFactory(factoryRegistry);
+               registerFuncFactory(factoryRegistry, pluginConfiguration);
    
                spdlog::get("default_pysyslink")->debug("registerFuncFactory called on plugin: {}", pluginPath);
    
@@ -67,15 +68,13 @@ Program Listing for File BlockTypeSupportPluginLoader.cpp
            std::vector<std::string> sharedLibraries;
    
            try {
-               // Iterate over the contents of the search directory
-               for (const auto& entry : std::filesystem::directory_iterator(searchDirectory)) {
-                   if (entry.is_regular_file()) {
-                       // Get the filename
-                       const std::string filename = entry.path().filename().string();
-   
-                       // Check if the filename matches the desired pattern
+               // Use recursive_directory_iterator to look in subfolders (depth 1)
+               for (auto it = std::filesystem::recursive_directory_iterator(searchDirectory); it != std::filesystem::recursive_directory_iterator(); ++it) {
+                   if (it.depth() > 1) continue; // Only top-level and first-level subfolders
+                   if (it->is_regular_file()) {
+                       const std::string filename = it->path().filename().string();
                        if (filename.find("libBlockTypeSupports") == 0 && this->StringEndsWith(filename, ".so")) {
-                           sharedLibraries.push_back(entry.path().string());
+                           sharedLibraries.push_back(it->path().string());
                        }
                    }
                }

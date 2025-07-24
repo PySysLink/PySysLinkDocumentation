@@ -18,7 +18,7 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structPySysLinkBase_1_1SimulationOutput.rst
+   structPySysLinkBase_1_1WriteTask.rst
 
 .. toctree::
    :maxdepth: 5
@@ -148,12 +148,22 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   classPySysLinkBase_1_1SimulationOutput.rst
+
+.. toctree::
+   :maxdepth: 5
+
    classPySysLinkBase_1_1SolverFactory.rst
 
 .. toctree::
    :maxdepth: 5
 
    classPySysLinkBase_1_1SpdlogManager.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classPySysLinkBase_1_1TaskQueue.rst
 
 .. toctree::
    :maxdepth: 5
@@ -184,6 +194,30 @@ Enums
 
    enum_SampleTime_8h_1a37b07c002d234502a0a433a8063533d7.rst
 
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   function_main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_main__dummy_8cpp_1a0ddf1224851353fc92bfbff6f499fa97.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_FullySupportedSignalValue_8cpp_1a0620ff31a80632e422a7b34e696f901d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function_SimulationOutput_8h_1a6e64c657de8915636d77fd73d96b52ef.rst
+
 Typedefs
 ********
 
@@ -201,4 +235,4 @@ Typedefs
 .. toctree::
    :maxdepth: 5
 
-   typedef_FullySupportedSignalValue_8h_1a717ef293f9aa9b88bc84fe6106fb6cd0.rst
+   typedef_FullySupportedSignalValue_8h_1a9171452032661969df90db630edd0c2f.rst

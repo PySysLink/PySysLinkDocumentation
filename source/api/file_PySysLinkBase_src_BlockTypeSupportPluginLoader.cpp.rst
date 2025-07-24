@@ -32,6 +32,8 @@ Includes
 
 - ``BlockTypeSupportPluginLoader.h`` (:ref:`file_PySysLinkBase_src_BlockTypeSupportPluginLoader.h`)
 
+- ``dlfcn.h``
+
 - ``filesystem``
 
 - ``spdlog/spdlog.h``

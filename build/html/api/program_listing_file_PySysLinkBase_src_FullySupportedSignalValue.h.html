@@ -43,10 +43,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">PySysLink – Open Source Block-Based Simulation Framework</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">PySysLink: Getting Started</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
 </ul>
@@ -90,15 +95,20 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex&gt;</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PortsAndSignalValues/UnknownTypeSignalValue.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PortsAndSignalValues/SignalValue.h&quot;</span>
+
 <span class="k">namespace</span><span class="w"> </span><span class="nn">PySysLinkBase</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">FullySupportedSignalValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span>
-<span class="w">        </span><span class="kt">int</span><span class="p">,</span>
-<span class="w">        </span><span class="kt">double</span><span class="p">,</span>
-<span class="w">        </span><span class="kt">bool</span><span class="p">,</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">double</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">bool</span><span class="p">,</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span>
+<span class="o">&gt;</span><span class="p">;</span>
 
+<span class="n">FullySupportedSignalValue</span><span class="w"> </span><span class="nf">ConvertToFullySupportedSignalValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">UnknownTypeSignalValue</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">unknownValue</span><span class="p">);</span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">// namespace PySysLinkBase</span>
 

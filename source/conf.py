@@ -6,9 +6,6 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-from cgitb import html
-
-
 project = 'PySysLink'
 copyright = '2025, Pello Usabiaga'
 author = 'Pello Usabiaga'
@@ -18,7 +15,13 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ["breathe",
-              "exhale"]
+              "exhale",
+              "myst_parser"]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 
 templates_path = ['_templates']
 exclude_patterns = []

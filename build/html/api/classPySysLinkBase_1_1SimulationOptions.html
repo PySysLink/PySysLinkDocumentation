@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class SolverFactory" href="classPySysLinkBase_1_1SolverFactory.html" />
+    <link rel="next" title="Class SimulationOutput" href="classPySysLinkBase_1_1SimulationOutput.html" />
     <link rel="prev" title="Class SimulationModel" href="classPySysLinkBase_1_1SimulationModel.html" /> 
 </head>
 
@@ -45,10 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">PySysLink – Open Source Block-Based Simulation Framework</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">PySysLink: Getting Started</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
@@ -56,7 +61,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="structPySysLinkBase_1_1SimulationOutput.html">Struct SimulationOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structPySysLinkBase_1_1WriteTask.html">Struct WriteTask</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1BasicOdeSolver.html">Class BasicOdeSolver</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1BlockEvent.html">Class BlockEvent</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1BlockEventsHandler.html">Class BlockEventsHandler</a></li>
@@ -82,14 +87,17 @@
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1SimulationManager.html">Class SimulationManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1SimulationModel.html">Class SimulationModel</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class SimulationOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1SimulationOutput.html">Class SimulationOutput</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1SolverFactory.html">Class SolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1SpdlogManager.html">Class SpdlogManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1TaskQueue.html">Template Class TaskQueue</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1UnknownTypeSignal.html">Class UnknownTypeSignal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1UnknownTypeSignalValue.html">Class UnknownTypeSignalValue</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classPySysLinkBase_1_1ValueUpdateBlockEvent.html">Class ValueUpdateBlockEvent</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
 </ul>
 </li>
@@ -172,6 +180,21 @@
 <span id="_CPPv3N13PySysLinkBase17SimulationOptions20solversConfigurationE"></span><span id="_CPPv2N13PySysLinkBase17SimulationOptions20solversConfigurationE"></span><span id="PySysLinkBase::SimulationOptions::solversConfiguration__std::map:ss.std::map:ss.ConfigurationValue::"></span><span class="target" id="classPySysLinkBase_1_1SimulationOptions_1a8a9524188567b89745c363137e20a3fd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_ConfigurationValue_8h_1a283f92b24f18044778ccff4ee920625a.html#_CPPv4N13PySysLinkBase18ConfigurationValueE" title="PySysLinkBase::ConfigurationValue"><span class="n"><span class="pre">ConfigurationValue</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">solversConfiguration</span></span></span><a class="headerlink" href="#_CPPv4N13PySysLinkBase17SimulationOptions20solversConfigurationE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PySysLinkBase17SimulationOptions12hdf5FileNameE">
+<span id="_CPPv3N13PySysLinkBase17SimulationOptions12hdf5FileNameE"></span><span id="_CPPv2N13PySysLinkBase17SimulationOptions12hdf5FileNameE"></span><span id="PySysLinkBase::SimulationOptions::hdf5FileName__ss"></span><span class="target" id="classPySysLinkBase_1_1SimulationOptions_1aca086f541ec9f4cea4e9aff7aa6c16b3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hdf5FileName</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><a class="headerlink" href="#_CPPv4N13PySysLinkBase17SimulationOptions12hdf5FileNameE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PySysLinkBase17SimulationOptions22saveToFileContinuouslyE">
+<span id="_CPPv3N13PySysLinkBase17SimulationOptions22saveToFileContinuouslyE"></span><span id="_CPPv2N13PySysLinkBase17SimulationOptions22saveToFileContinuouslyE"></span><span id="PySysLinkBase::SimulationOptions::saveToFileContinuously__b"></span><span class="target" id="classPySysLinkBase_1_1SimulationOptions_1a7b1ce07882bd97a009a3c9dd57f8fd2c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveToFileContinuously</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N13PySysLinkBase17SimulationOptions22saveToFileContinuouslyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13PySysLinkBase17SimulationOptions13saveToVectorsE">
+<span id="_CPPv3N13PySysLinkBase17SimulationOptions13saveToVectorsE"></span><span id="_CPPv2N13PySysLinkBase17SimulationOptions13saveToVectorsE"></span><span id="PySysLinkBase::SimulationOptions::saveToVectors__b"></span><span class="target" id="classPySysLinkBase_1_1SimulationOptions_1aff06881518a63fb5515a9671bbc237e5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveToVectors</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N13PySysLinkBase17SimulationOptions13saveToVectorsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
 </div>
 </dd></dl>
 
@@ -183,7 +206,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classPySysLinkBase_1_1SimulationModel.html" class="btn btn-neutral float-left" title="Class SimulationModel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classPySysLinkBase_1_1SolverFactory.html" class="btn btn-neutral float-right" title="Class SolverFactory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classPySysLinkBase_1_1SimulationOutput.html" class="btn btn-neutral float-right" title="Class SimulationOutput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

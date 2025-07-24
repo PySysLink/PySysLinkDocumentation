@@ -68,10 +68,6 @@ Included By
 
 - :ref:`file_PySysLinkBase_src_PortLink.h`
 
-- :ref:`file_PySysLinkBase_src_PortsAndSignalValues_InputPort.cpp`
-
-- :ref:`file_PySysLinkBase_src_PortsAndSignalValues_Port.cpp`
-
 - :ref:`file_PySysLinkBase_src_SimulationModel.h`
 
 

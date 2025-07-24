@@ -42,9 +42,13 @@ Included By
 -----------
 
 
+- :ref:`file_PySysLinkBase_src_FullySupportedSignalValue.h`
+
 - :ref:`file_PySysLinkBase_src_PortsAndSignalValues_Port.h`
 
 - :ref:`file_PySysLinkBase_src_PortsAndSignalValues_SignalValue.h`
+
+- :ref:`file_PySysLinkBase_src_SimulationOutput.h`
 
 
 

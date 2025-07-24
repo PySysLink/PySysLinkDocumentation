@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PySysLink – Open Source Block-Based Simulation Framework &mdash; PySysLink 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PySysLink: Getting Started" href="getting_started.html" />
+    <link rel="prev" title="PySysLink Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PySysLink
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PySysLink – Open Source Block-Based Simulation Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-pysyslink">🧩 What is PySysLink?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-features">🚀 Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pysyslink-structure">PySysLink Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-workflow">Simulation Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-architecture">Plugin Architecture</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lowlevel-plugins-pysyslinkbase">1. Low‑Level Plug‑Ins (PySysLinkBase)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#highlevel-plugins-pysyslinktoolkit">2. High‑Level Plug‑Ins (PySysLinkToolkit)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editor-integration-pysyslinkeditor">3. Editor Integration (PySysLinkEditor)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#components-of-pysyslink">Components of PySysLink</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pysyslinkbase-core-simulation-engine">1. <strong>PySysLinkBase</strong> – Core Simulation Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blocktypes-abstract-interfaces-for-blocks">2. <strong>BlockTypes</strong> – Abstract Interfaces for Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blocktypesupports-bridges-between-blocks-and-the-core-engine">3. <strong>BlockTypeSupports</strong> – Bridges Between Blocks and the Core Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blocklibraries-concrete-block-implementations">4. <strong>BlockLibraries</strong> – Concrete Block Implementations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pysyslinkbasepythonbindings-python-access-to-the-c-core">5. <strong>PySysLinkBasePythonBindings</strong> – Python Access to the C++ Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pysyslinktoolkit-model-compilation-and-plugin-management">6. <strong>PySysLinkToolkit</strong> – Model Compilation and Plugin Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pysyslinkeditor-visual-block-editor-for-vscode">7. <strong>PySysLinkEditor</strong> – Visual Block Editor for VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-block-plugins-visual-and-compilation-logic">8. <strong>High-Level Block Plugins</strong> – Visual and Compilation Logic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-of-workflow">Summary of Workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">PySysLink: Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PySysLink</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PySysLink – Open Source Block-Based Simulation Framework</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/introduction.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pysyslink-open-source-block-based-simulation-framework">
+<h1>PySysLink – Open Source Block-Based Simulation Framework<a class="headerlink" href="#pysyslink-open-source-block-based-simulation-framework" title="Link to this heading"></a></h1>
+<p><strong>PySysLink</strong> is a modular, open source simulation framework inspired by tools like Simulink. Designed for scientific computing, control engineering, and dynamic system modeling, PySysLink lets you define and simulate complex systems using a flexible architecture powered by <strong>C++</strong>, <strong>Python</strong>, and <strong>VSCode</strong>.</p>
+<p>📘 <strong>Documentation</strong>: <a class="reference external" href="https://pysyslink.readthedocs.io/en/latest/">https://pysyslink.readthedocs.io/en/latest/</a></p>
+<section id="what-is-pysyslink">
+<h2>🧩 What is PySysLink?<a class="headerlink" href="#what-is-pysyslink" title="Link to this heading"></a></h2>
+<p>PySysLink is an open and extensible alternative to proprietary simulation tools. It allows users to:</p>
+<ul class="simple">
+<li><p>⚙️ <strong>Define simulation models</strong> using a visual block editor.</p></li>
+<li><p>🔄 <strong>Run dynamic system simulations</strong>, model physical systems, control loops, and cyber-physical architectures in a unified simulation engine.</p></li>
+<li><p>🧱 <strong>Create and load plug-ins</strong> for defining new blocks with greate flexibility.</p></li>
+<li><p>🐍 <strong>Control simulations from Python</strong>, using high-performance bindings to the C++ core.</p></li>
+</ul>
+</section>
+<section id="key-features">
+<h2>🚀 Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Modular Architecture:</strong> Core simulation logic is decoupled from block implementations.</p></li>
+<li><p><strong>Plug‑In Support:</strong> Easily add new block libraries without modifying the core engine.</p></li>
+<li><p><strong>C++ Core, Python Integration:</strong> Use a high-performance C++ backend with Python interfaces for parameter initialization, execution, and full simulation control</p></li>
+<li><p><strong>Text-Based Model Definitions:</strong> Easily write and share simulation models using human-readable config files.</p></li>
+<li><p><strong>Open and Community‑Driven:</strong> An open source alternative to proprietary simulation tools, built using widely adopted programming standards.</p></li>
+</ul>
+</section>
+<section id="pysyslink-structure">
+<h2>PySysLink Structure<a class="headerlink" href="#pysyslink-structure" title="Link to this heading"></a></h2>
+<section id="simulation-workflow">
+<h3>Simulation Workflow<a class="headerlink" href="#simulation-workflow" title="Link to this heading"></a></h3>
+<p>Below is the end‑to‑end flow of a typical PySysLink simulation:</p>
+<p><img alt="structure" src="_images/compilation_and_simulation.drawio.png" /></p>
+<ol class="arabic simple">
+<li><p><strong>Visual Modeling</strong></p>
+<ul class="simple">
+<li><p>You design your system in <strong>PySysLinkEditor</strong> (a VS Code extension) using a drag‑and‑drop block interface.</p></li>
+<li><p>The editor saves your model as a JSON document with <strong>high‑level blocks</strong>, visual coordinates, and parameter expressions.</p></li>
+</ul>
+</li>
+<li><p><strong>Compilation</strong></p>
+<ul class="simple">
+<li><p>When you launch a simulation, the <strong>PySysLinkToolkit</strong> (Python library) transforms the high‑level JSON into a <strong>low‑level YAML</strong> representation.</p></li>
+<li><p>The YAML model contains only elemental, simulable blocks, without UI metadata or nested subsystems.</p></li>
+</ul>
+</li>
+<li><p><strong>Simulation Execution</strong></p>
+<ul class="simple">
+<li><p><strong>PySysLinkBase</strong> (C++ core engine) loads the YAML file, instantiates each block, and runs the simulation loop.</p></li>
+<li><p>Outputs are written to JSON or HDF5 files for further analysis.</p></li>
+</ul>
+</li>
+<li><p><strong>Result Visualization</strong></p>
+<ul class="simple">
+<li><p>Back in VS Code, <strong>PySysLinkEditor</strong> reads the simulation outputs and renders plots or display blocks inline, giving you immediate feedback on your model’s behavior.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="plugin-architecture">
+<h3>Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Link to this heading"></a></h3>
+<p>PySysLink’s power comes from its flexible plug‑in model, allowing you to extend both high and low‑level functionality without touching the core code:</p>
+<p><img alt="structure" src="_images/pysyslink_general_structure.drawio.png" /></p>
+<section id="lowlevel-plugins-pysyslinkbase">
+<h4>1. Low‑Level Plug‑Ins (PySysLinkBase)<a class="headerlink" href="#lowlevel-plugins-pysyslinkbase" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>BlockTypeSupport Modules</strong></p>
+<ul>
+<li><p>Each implements a factory for <code class="docutils literal notranslate"><span class="pre">ISimulationBlock</span></code>, the C++ base class for all low‑level blocks.</p></li>
+<li><p>They <strong>translate</strong> an abstract BlockType interface (which could be defined in C++, Python, Fortran, or an FMU) into concrete <code class="docutils literal notranslate"><span class="pre">ISimulationBlock</span></code> instances.</p></li>
+<li><p><strong>Block libraries</strong> (e.g., <code class="docutils literal notranslate"><span class="pre">BlockLibrariesBasicBlocksBasicCpp</span></code>) are simply shared‑library plug‑ins that the BlockTypeSupport module dynamically loads at runtime.</p></li>
+</ul>
+</li>
+<li><p><strong>Typical Pattern</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Define</strong> a language‑agnostic BlockType interface (e.g., methods for <code class="docutils literal notranslate"><span class="pre">initialize()</span></code>, <code class="docutils literal notranslate"><span class="pre">step()</span></code>, <code class="docutils literal notranslate"><span class="pre">output()</span></code>).</p></li>
+<li><p><strong>Implement</strong> concrete blocks in a library (C++, FMU, Python…).</p></li>
+<li><p><strong>Write</strong> a BlockTypeSupport plug‑in that loads those libraries, instantiates blocks, and registers them with the engine.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="highlevel-plugins-pysyslinktoolkit">
+<h4>2. High‑Level Plug‑Ins (PySysLinkToolkit)<a class="headerlink" href="#highlevel-plugins-pysyslinktoolkit" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Python‑based Block Templates</strong></p>
+<ul>
+<li><p>Reside in a plugin folder or distributed via pip entry points.</p></li>
+<li><p>Each template YAML declares:</p>
+<ul>
+<li><p><strong>Display metadata</strong>: icon, port layout, parameter form.</p></li>
+<li><p><strong>Conversion logic</strong>: a Python converter class that takes high‑level properties and emits one or more low‑level block descriptors (and links).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Examples</strong></p>
+<ul>
+<li><p><strong>Neural-network neuron</strong><br />
+A high-level neuron block might expand into three low-level blocks:</p>
+<ol class="arabic simple">
+<li><p>A <strong>Constant</strong> block providing the bias value.</p></li>
+<li><p>An <strong>Adder</strong> block combining the weighted input and bias.</p></li>
+<li><p>An <strong>Activation</strong> block applying the sigmoid function.<br />
+The converter handles creating these blocks and wiring them together under the hood.</p></li>
+</ol>
+</li>
+<li><p><strong>Scope block</strong></p>
+<ul>
+<li><p>This block compiles to a lower-level display block that instructs the simulation engine to record its input signal during the run.</p></li>
+<li><p>Provides a Matplotlib-based plot back to the editor after simulation.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="editor-integration-pysyslinkeditor">
+<h4>3. Editor Integration (PySysLinkEditor)<a class="headerlink" href="#editor-integration-pysyslinkeditor" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Decoupled UI</strong></p>
+<ul>
+<li><p>Renders the block palette from Toolkit’s high‑level templates.</p></li>
+<li><p>Sends JSON models to Toolkit for compilation and to Base for simulation via the Python server.</p></li>
+</ul>
+</li>
+<li><p><strong>Run‑Time Messaging</strong></p>
+<ul>
+<li><p>Receives progress, display, and plot events from the simulation server.</p></li>
+<li><p>Displays live plots, numeric displays, and diagnostics inline.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>By separating <strong>UI</strong>, <strong>compilation</strong>, and <strong>execution</strong> into distinct layers—each extensible via plug‑ins—PySysLink lets you:</p>
+<ul class="simple">
+<li><p><strong>Swap in new block types</strong> (e.g., FMUs, custom control algorithms) at either the high‑ or low‑level.</p></li>
+<li><p><strong>Customize compilation</strong> of high‑level constructs into optimized C++ blocks.</p></li>
+<li><p><strong>Maintain a clean core</strong> engine, while fostering community‑driven extensions and libraries.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="components-of-pysyslink">
+<h2>Components of PySysLink<a class="headerlink" href="#components-of-pysyslink" title="Link to this heading"></a></h2>
+<p>PySysLink is built as a <strong>modular simulation platform</strong> with a layered architecture and a plugin-based design. Each core component focuses on a specific responsibility: from graphical editing and high-level model compilation, to simulation execution and result visualization. This modular structure enables high flexibility, portability, and extensibility.</p>
+<p>Below is an overview of the key software components that make up the PySysLink ecosystem.</p>
+<hr class="docutils" />
+<section id="pysyslinkbase-core-simulation-engine">
+<h3>1. <strong>PySysLinkBase</strong> – Core Simulation Engine<a class="headerlink" href="#pysyslinkbase-core-simulation-engine" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">PySysLinkBase</span></code> is the high-performance C++ core responsible for executing dynamic system simulations. It provides:</p>
+<ul class="simple">
+<li><p>A well-defined plugin interface to load and simulate low-level blocks.</p></li>
+<li><p>Support for both continuous-time and discrete-time systems.</p></li>
+<li><p>Event-driven and time-stepped simulation infrastructure.</p></li>
+<li><p>Output generation in formats like JSON and HDF5.</p></li>
+</ul>
+<p>The engine is <strong>plugin-agnostic</strong>: it does not hardcode any block functionality but instead dynamically loads implementations at runtime through <code class="docutils literal notranslate"><span class="pre">BlockTypeSupport</span></code> modules.</p>
+</section>
+<hr class="docutils" />
+<section id="blocktypes-abstract-interfaces-for-blocks">
+<h3>2. <strong>BlockTypes</strong> – Abstract Interfaces for Blocks<a class="headerlink" href="#blocktypes-abstract-interfaces-for-blocks" title="Link to this heading"></a></h3>
+<p>BlockTypes repositories (e.g., <code class="docutils literal notranslate"><span class="pre">BlockTypesBasicCpp</span></code>) define <strong>language-specific base classes</strong> and <strong>abstract interfaces</strong> for writing block libraries. These are:</p>
+<ul class="simple">
+<li><p>Independent of PySysLinkBase and its internals.</p></li>
+<li><p>Designed to provide a clean API for developers to write reusable simulation blocks.</p></li>
+<li><p>Lightweight and decoupled, so they can be reused in other simulation backends if needed.</p></li>
+</ul>
+<p>For example, a developer can write C++ blocks that inherit from <code class="docutils literal notranslate"><span class="pre">BasicCppBlock</span></code>, defined in <code class="docutils literal notranslate"><span class="pre">BlockTypesBasicCpp</span></code>, without any dependency on PySysLinkBase itself.</p>
+</section>
+<hr class="docutils" />
+<section id="blocktypesupports-bridges-between-blocks-and-the-core-engine">
+<h3>3. <strong>BlockTypeSupports</strong> – Bridges Between Blocks and the Core Engine<a class="headerlink" href="#blocktypesupports-bridges-between-blocks-and-the-core-engine" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">BlockTypeSupport</span></code> modules (e.g., <code class="docutils literal notranslate"><span class="pre">BlockTypeSupportsBasicCpp</span></code>) <strong>translate a block type into something PySysLinkBase can simulate</strong>. These act as adapters and include:</p>
+<ul class="simple">
+<li><p>A factory that creates <code class="docutils literal notranslate"><span class="pre">ISimulationBlock</span></code> instances for blocks defined via a specific <code class="docutils literal notranslate"><span class="pre">BlockType</span></code>.</p></li>
+<li><p>Runtime logic to dynamically load external block libraries.</p></li>
+<li><p>Optional bindings to support non-C++ block types (e.g., FMU, Fortran, or Python blocks).</p></li>
+</ul>
+<p>These modules depend on both PySysLinkBase and a specific <code class="docutils literal notranslate"><span class="pre">BlockTypes</span></code> repository. They register with the engine as plugins and handle the instantiation and interfacing of concrete block implementations.</p>
+</section>
+<hr class="docutils" />
+<section id="blocklibraries-concrete-block-implementations">
+<h3>4. <strong>BlockLibraries</strong> – Concrete Block Implementations<a class="headerlink" href="#blocklibraries-concrete-block-implementations" title="Link to this heading"></a></h3>
+<p>BlockLibraries (e.g., <code class="docutils literal notranslate"><span class="pre">BlockLibrariesBasicBlocksBasicCpp</span></code>) provide <strong>fully implemented simulation blocks</strong>, such as:</p>
+<ul class="simple">
+<li><p>Constant</p></li>
+<li><p>Adder</p></li>
+<li><p>Integrator</p></li>
+<li><p>Display</p></li>
+</ul>
+<p>These blocks inherit from interfaces in a specific <code class="docutils literal notranslate"><span class="pre">BlockTypes</span></code> repository and are loaded at runtime by the corresponding <code class="docutils literal notranslate"><span class="pre">BlockTypeSupport</span></code> module.</p>
+<p>Naming conventions help organize them clearly:</p>
+<ul class="simple">
+<li><p>They usually begin with <code class="docutils literal notranslate"><span class="pre">BlockLibraries</span></code></p></li>
+<li><p>They end with an identifier like <code class="docutils literal notranslate"><span class="pre">BasicCpp</span></code> to indicate compatibility</p></li>
+</ul>
+<p>Each library is focused, for example offering “basic math blocks” or “control system utilities.”</p>
+</section>
+<hr class="docutils" />
+<section id="pysyslinkbasepythonbindings-python-access-to-the-c-core">
+<h3>5. <strong>PySysLinkBasePythonBindings</strong> – Python Access to the C++ Core<a class="headerlink" href="#pysyslinkbasepythonbindings-python-access-to-the-c-core" title="Link to this heading"></a></h3>
+<p>This package exposes the functionality of <code class="docutils literal notranslate"><span class="pre">PySysLinkBase</span></code> to Python using a <strong>nanobind</strong> interface, automatically generated by <strong>Litgen</strong>.</p>
+<p>It allows:</p>
+<ul class="simple">
+<li><p>Full control over simulation setup and execution from Python.</p></li>
+<li><p>Integration with Python-based preprocessing or postprocessing tools.</p></li>
+<li><p>Scripting and automation of simulation workflows.</p></li>
+</ul>
+<p>Bindings make it easier to manage low level details of the simulation for developers not familiar with C++, but especially it allows the PySysLinkToolkit to access PySysLinkBase.</p>
+</section>
+<hr class="docutils" />
+<section id="pysyslinktoolkit-model-compilation-and-plugin-management">
+<h3>6. <strong>PySysLinkToolkit</strong> – Model Compilation and Plugin Management<a class="headerlink" href="#pysyslinktoolkit-model-compilation-and-plugin-management" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">PySysLinkToolkit</span></code> is a <strong>Python library</strong> responsible for:</p>
+<ul class="simple">
+<li><p>Managing high-level system models defined in JSON-based <code class="docutils literal notranslate"><span class="pre">.pslk</span></code> files.</p></li>
+<li><p>Compiling those high-level models into low-level YAML simulation configurations.</p></li>
+<li><p>Managing the plugin system for high-level blocks.</p></li>
+<li><p>Providing the metadata required by the graphical editor (block appearance, categories, palette, etc.).</p></li>
+</ul>
+<p>It serves as the <strong>data layer</strong> of the PySysLinkEditor and as the logic layer for model transformation.</p>
+</section>
+<hr class="docutils" />
+<section id="pysyslinkeditor-visual-block-editor-for-vscode">
+<h3>7. <strong>PySysLinkEditor</strong> – Visual Block Editor for VSCode<a class="headerlink" href="#pysyslinkeditor-visual-block-editor-for-vscode" title="Link to this heading"></a></h3>
+<p>This is a <strong>VSCode extension</strong> that provides a graphical interface for designing simulation models using a block-diagram-based editor. Features include:</p>
+<ul class="simple">
+<li><p>Drag-and-drop block editing.</p></li>
+<li><p>JSON-based model serialization (<code class="docutils literal notranslate"><span class="pre">.pslk</span></code> format).</p></li>
+<li><p>Integration with <code class="docutils literal notranslate"><span class="pre">PySysLinkToolkit</span></code> for block metadata and compilation.</p></li>
+<li><p>Simulation launching and result visualization, connected with the backend.</p></li>
+</ul>
+<p>The editor supports dynamic updates, block palettes, connection validation, and custom rendering.</p>
+</section>
+<hr class="docutils" />
+<section id="high-level-block-plugins-visual-and-compilation-logic">
+<h3>8. <strong>High-Level Block Plugins</strong> – Visual and Compilation Logic<a class="headerlink" href="#high-level-block-plugins-visual-and-compilation-logic" title="Link to this heading"></a></h3>
+<p>High-level blocks, defined and loaded by <code class="docutils literal notranslate"><span class="pre">PySysLinkToolkit</span></code>, contain:</p>
+<ul class="simple">
+<li><p><strong>Display logic:</strong> how the block appears visually in the editor.</p></li>
+<li><p><strong>Compilation logic:</strong> how it converts to one or more low-level blocks and links.</p></li>
+</ul>
+<p>Blocks can also define field logic and expression parsing (e.g., allowing the use of Python expressions like <code class="docutils literal notranslate"><span class="pre">np.sin(t)</span></code> or parameter references in the block fields).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary-of-workflow">
+<h2>Summary of Workflow<a class="headerlink" href="#summary-of-workflow" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Model Editing</strong><br />
+Design your model visually using the PySysLinkEditor. Save the <code class="docutils literal notranslate"><span class="pre">.pslk</span></code> file (JSON-based format).</p></li>
+<li><p><strong>Model Compilation</strong><br />
+<code class="docutils literal notranslate"><span class="pre">PySysLinkToolkit</span></code> compiles the model into a low-level YAML representation.</p></li>
+<li><p><strong>Simulation Execution</strong><br />
+<code class="docutils literal notranslate"><span class="pre">PySysLinkBase</span></code> loads the YAML, instantiates the required plugins, and runs the simulation.</p></li>
+<li><p><strong>Result Visualization</strong><br />
+Output data (e.g., from display blocks) is stored in files and optionally visualized in the editor.</p></li>
+<li><p><strong>Extensibility</strong><br />
+Add new functionality by writing:</p>
+<ul class="simple">
+<li><p>New high-level block plugins (for UI and compilation).</p></li>
+<li><p>New block libraries (in C++, Python, or FMU).</p></li>
+<li><p>New BlockTypeSupport modules to integrate different simulation technologies.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PySysLink Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="PySysLink: Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Pello Usabiaga.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
