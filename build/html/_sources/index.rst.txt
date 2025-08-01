@@ -16,8 +16,7 @@ Welcome to the documentation for **PySysLink**, the open-source block-based simu
    :caption: Getting Started
 
    getting_started
-   # installation
-   # usage
+   roadmap
 
 .. toctree::
    :maxdepth: 2
