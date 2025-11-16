@@ -5,10 +5,7 @@ Improve editor visuals:
 -------------------------------------
 
 * Fix triangle blocks
-* Arrows on links
 * Proper port positioning
-* Multi-output links
-* Align grid
 * Copy paste
 
 High level systems:
@@ -28,12 +25,14 @@ PySysLinkBase:
 
 * Profile performance, improve
 * FMI export (check version)
+* Support event based blocks
 
 BlockTypeSupports:
 -------------------------------------
 
 * FMI support (check version)
 * Python blocks
+* State machines
 * Check best way to integrate hardware, sockets...
 
 Others:
